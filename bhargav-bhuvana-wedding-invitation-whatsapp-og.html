@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Wedding Invitation | Bhargav-Bhuvana</title>
+  <meta name="description" content="Bhargav-Bhuvana — Tap to open invitation." />
+  <meta name="theme-color" content="#fff3f3" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Bhargav-Bhuvana" />
+  <meta property="og:title" content="Wedding Invitation" />
+  <meta property="og:description" content="Bhargav-Bhuvana • Tap to open invitation" />
+  <meta property="og:image" content="https://res.cloudinary.com/dx3f65i2v/image/upload/v1782806028/file_00000000ae3071fa84f021119ff9aeef_xzf4sg.png" />
+  <meta property="og:image:secure_url" content="https://res.cloudinary.com/dx3f65i2v/image/upload/v1782806028/file_00000000ae3071fa84f021119ff9aeef_xzf4sg.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="1920" />
+  <meta property="og:image:alt" content="Wedding Invitation — Bhargav-Bhuvana — Tap to open invitation" />
+  <!-- Optional after hosting on your final public HTTPS URL:
+  <link rel="canonical" href="https://your-public-invitation-url" />
+  <meta property="og:url" content="https://your-public-invitation-url" />
+  -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Wedding Invitation" />
+  <meta name="twitter:description" content="Bhargav-Bhuvana • Tap to open invitation" />
+  <meta name="twitter:image" content="https://res.cloudinary.com/dx3f65i2v/image/upload/v1782806028/file_00000000ae3071fa84f021119ff9aeef_xzf4sg.png" />
+  <meta name="twitter:image:alt" content="Wedding Invitation — Bhargav-Bhuvana — Tap to open invitation" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fff3f3;
+      --bg-2:#ffe5e5;
+      --surface:#ffffff;
+      --surface-soft:#fff8f8;
+      --rose-50:#fff6f6;
+      --rose-100:#ffe1e1;
+      --rose-200:#ffcaca;
+      --rose-300:#ffaaaa;
+      --rose-400:#f58e8e;
+      --rose-500:#e16f6f;
+      --rose-700:#bf4f4f;
+      --rose-900:#912f3c;
+      --text:#7b303a;
+      --gold:#caa45d;
+      --shadow:0 20px 50px rgba(145,47,60,.10);
+      --radius:30px;
+      --radius-lg:36px;
+      --section-pad:22px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,sans-serif;
+      color:var(--text);
+      background:linear-gradient(180deg,#fffdfc 0%,#fff1f1 24%,#ffe6e6 100%);
+      overflow-x:hidden;
+    }
+    body.no-scroll{overflow:hidden}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .page-shell{position:relative;min-height:100vh}
+
+    .landing{
+      position:fixed;inset:0;z-index:40;display:flex;align-items:center;justify-content:center;
+      background:url('https://raw.githubusercontent.com/maryam-FOLDS/Bhargav-Bhuvana/main/imagebg.png') center/cover no-repeat;
+      transition:opacity .8s ease,visibility .8s ease,transform .9s ease;
+      padding:24px;
+    }
+    .landing::before{
+      content:'';position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(64,18,28,.18),rgba(64,18,28,.08) 28%,rgba(64,18,28,.22));
+      backdrop-filter:blur(1.5px);
+    }
+    .landing-inner{position:relative;z-index:2;text-align:center;max-width:320px;width:100%}
+    .seal-button{
+      appearance:none;border:0;background:transparent;padding:0;margin:0 auto 20px;display:block;cursor:pointer;
+      animation:floatSeal 4.8s ease-in-out infinite;filter:drop-shadow(0 18px 35px rgba(48,14,22,.28));
+      width:min(82vw,286px);
+    }
+    .seal-button img{width:100%;height:auto;display:block}
+    .landing-copy{color:#fff8f2;text-shadow:0 6px 24px rgba(73,17,30,.32)}
+    .landing-copy .mini{font-family:'Cinzel',serif;letter-spacing:4px;font-size:12px;opacity:.92;margin-bottom:10px}
+    .landing-copy h1{margin:0;font-family:'Great Vibes',cursive;font-size:42px;font-weight:400;line-height:1.1}
+    .landing-copy p{margin:10px 0 0;font-family:'Cinzel',serif;font-size:14px;letter-spacing:2.8px;text-transform:uppercase}
+    .landing.opened{opacity:0;visibility:hidden;transform:scale(1.03)}
+
+    .main-content{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+    body.invitation-open .main-content{opacity:1;transform:translateY(0)}
+
+    .marigold-rain{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:25;display:none;perspective:1200px;isolation:isolate}
+    body.invitation-open .marigold-rain.active{display:block}
+    .marigold{
+      position:absolute;top:-18vh;left:0;opacity:0;will-change:transform,opacity;
+      animation:marigoldFall var(--fall-duration,15s) linear forwards;
+      transform-style:preserve-3d;
+      z-index:var(--layer,2);
+    }
+    .marigold-drift,.marigold-spin-x,.marigold-spin-y,.marigold-spin-z{
+      display:block;width:100%;height:100%;transform-style:preserve-3d;
+    }
+    .marigold-drift{animation:marigoldSway var(--sway-duration,4.8s) ease-in-out infinite alternate}
+    .marigold-spin-x{animation:marigoldSpinX var(--spin-x-duration,6.2s) ease-in-out infinite alternate}
+    .marigold-spin-y{animation:marigoldSpinY var(--spin-y-duration,7.4s) ease-in-out infinite alternate}
+    .marigold-spin-z{animation:marigoldSpinZ var(--spin-z-duration,10.8s) linear infinite}
+    .marigold-svg{width:100%;height:100%;display:block;overflow:visible;filter:drop-shadow(0 12px 18px rgba(110,60,0,.18))}
+    .marigold.near .marigold-svg{filter:drop-shadow(0 18px 22px rgba(110,60,0,.22))}
+    .marigold.far{opacity:.84}
+    .marigold.far .marigold-svg{filter:blur(.35px) drop-shadow(0 8px 14px rgba(110,60,0,.14)) saturate(.96)}
+
+    section{position:relative;padding:0 var(--section-pad)}
+    .banner-wrap{min-height:100svh;display:flex;align-items:flex-start;justify-content:center;padding:0;background:#fff0f0}
+    .banner-card{width:100%;max-width:none;border-radius:0;overflow:visible;box-shadow:none;background:transparent}
+    .banner-card img{width:100%;height:auto;display:block}
+
+    .lux-section{
+      margin:0;padding:22px 18px 28px;border-radius:0;overflow:hidden;
+      background:linear-gradient(180deg,#fff1f1 0%,#ffe5e5 52%,#ffdede 100%);
+      box-shadow:none;
+    }
+    .scratch-area{min-height:auto;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;position:relative}
+    .scratch-deco{position:absolute;font-size:26px;line-height:1;opacity:.72;pointer-events:none;filter:drop-shadow(0 3px 8px rgba(139,23,59,.05))}
+    .deco-leaf-top{top:20px;left:8px;color:#95be83;font-size:44px;opacity:.58;transform:rotate(-8deg)}
+    .deco-butterfly{top:52px;left:46%;color:#4f8dff;font-size:24px;opacity:.86}
+    .deco-sakura-top{top:16px;right:10px;color:#f2a0a0;font-size:34px}
+    .deco-sakura-mid{top:130px;right:40%;color:#f0aaaa;font-size:18px;opacity:.72}
+    .deco-flower-bottom{bottom:28px;left:6px;color:#ebcb7d;font-size:34px;opacity:.82}
+    .deco-leaf-bottom{bottom:12px;right:6px;color:#9fc78f;font-size:42px;opacity:.58;transform:rotate(18deg)}
+
+    .scratch-card-wrap{position:relative;width:min(92vw,720px);margin-top:8px}
+    .scratch-card{
+      position:relative;height:148px;border-radius:18px;border:2px solid #ef8f8f;
+      box-shadow:0 12px 28px rgba(145,47,60,.10);overflow:hidden;
+      background:linear-gradient(135deg,#ffd6d6 0%,#ffbcbc 48%,#f59a9a 100%);
+    }
+    .scratch-canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair}
+    .scratch-overlay-text{
+      position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;
+      font-family:'Cinzel',serif;font-weight:600;letter-spacing:3px;font-size:17px;color:rgba(255,255,255,.78);
+      text-align:center;text-transform:uppercase;pointer-events:none;padding:0 18px;
+      text-shadow:0 1px 1px rgba(255,255,255,.14);
+    }
+    .scratch-card::before{
+      content:'';position:absolute;inset:-30% -10%;
+      background:linear-gradient(100deg,transparent 24%, rgba(255,255,255,.25) 42%, rgba(255,255,255,.08) 50%, transparent 64%);
+      animation:premiumShine 3.8s linear infinite;pointer-events:none;z-index:1;
+    }
+    .reveal-content{
+      position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+      background:linear-gradient(180deg,#fffdfd 0%,#fff3f3 100%);opacity:0;transform:scale(.985);transition:opacity .55s ease,transform .55s ease;
+      text-align:center;padding:18px 16px;z-index:0;
+    }
+    .scratch-card.revealed .reveal-content{opacity:1;transform:scale(1)}
+    .scratch-card.revealed::before,.scratch-card.revealed .scratch-overlay-text{opacity:0;transition:opacity .35s ease}
+    .save-date{font-family:'Cinzel',serif;font-size:22px;letter-spacing:2px;color:#9d3b3b;line-height:1.1;margin:0;white-space:nowrap;text-align:center}
+    .reveal-date{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;line-height:1.05;color:#912f3c;transform:translateY(12px);opacity:0;transition:all .7s ease .08s;margin:0;text-align:center}
+    .scratch-card.revealed .reveal-date{transform:translateY(0);opacity:1}
+    .sakura{
+      position:absolute;font-size:30px;color:#ef9c9c;opacity:0;transition:opacity .5s ease .15s,transform .7s ease .15s;
+      filter:drop-shadow(0 5px 10px rgba(139,23,59,.08));
+    }
+    .s1{top:-14px;left:48%;transform:translate(-50%,-6px)}
+    .s2{top:16px;left:16px;transform:translateY(8px)}
+    .s3{bottom:6px;right:16px;transform:translateY(8px)}
+    .s4{top:18px;right:26px;transform:translateY(8px);font-size:22px;opacity:.92}
+    .scratch-card.revealed .sakura{opacity:1;transform:translateY(0)}
+
+    .countdown-wrap{width:min(96%,520px);margin-top:16px;max-height:0;opacity:0;overflow:hidden;transition:max-height .75s ease,opacity .7s ease,transform .7s ease;transform:translateY(-18px)}
+    .countdown-wrap.show{max-height:180px;opacity:1;transform:translateY(0)}
+    .countdown-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .count-card{
+      background:#fff;border:2px solid var(--rose-400);border-radius:20px;box-shadow:0 10px 26px rgba(145,47,60,.08);
+      width:100%;min-height:88px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 6px;
+    }
+    .count-number{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:#8b173b;line-height:1}
+    .count-label{font-family:'Cinzel',serif;font-size:10px;letter-spacing:2px;color:#a44a68;margin-top:8px}
+    .count-complete{display:none;text-align:center;font-family:'Cinzel',serif;letter-spacing:2px;color:#8b173b;padding:14px 8px}
+    .countdown-wrap.complete .countdown-grid{display:none}
+    .countdown-wrap.complete .count-complete{display:block}
+
+    .confetti-layer{position:absolute;inset:-50px;pointer-events:none;overflow:visible;z-index:5}
+    .confetti-piece{position:absolute;top:0;left:50%;opacity:.95;animation:confetti 2.2s ease-out forwards}
+    .confetti-piece.circle{border-radius:50%}
+    .confetti-piece.heart{clip-path:path('M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z')}
+    .confetti-piece.petal{border-radius:60% 40% 56% 44%/58% 40% 60% 42%}
+
+    .section-heading{text-align:center;margin-bottom:16px}
+    .eyebrow{font-family:'Cinzel',serif;letter-spacing:3px;text-transform:uppercase;font-size:12px;color:#be5f5f;margin-bottom:10px}
+    .title{font-family:'Cinzel',serif;font-size:30px;color:#912f3c;letter-spacing:2px;line-height:1.18;margin:0}
+    .subtitle{max-width:300px;margin:14px auto 0;color:#9d5c5c;font-size:14px;line-height:1.75}
+
+    .events-section{
+      margin:0;padding:42px 18px 52px;border-radius:0;
+      background:linear-gradient(180deg,#fff0f0 0%,#ffe1e1 44%,#fff3f3 100%);
+      box-shadow:none;
+    }
+    .carousel{position:relative;max-width:min(100%,520px);margin:28px auto 0}
+    .event-frame{position:relative;border-radius:34px;overflow:hidden;box-shadow:none;background:transparent}
+    .event-frame img{width:100%;height:min(78svh,920px);aspect-ratio:9/16;object-fit:cover;background:transparent;border-radius:34px}
+    .nav-next,.nav-prev{
+      position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:0;
+      background:rgba(255,255,255,.92);color:#c35a5a;box-shadow:0 10px 24px rgba(145,47,60,.14);font-size:24px;cursor:pointer;z-index:3
+    }
+    .nav-next{right:12px}.nav-prev{left:12px}
+    .event-meta{text-align:center;padding:16px 10px 8px}
+    .event-name{font-family:'Cinzel',serif;font-size:18px;letter-spacing:1.5px;color:#912f3c;margin:0 0 8px}
+    .event-date{font-size:13px;color:#a15f5f;margin:0 0 14px}
+    .event-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .pill-btn{
+      min-width:144px;padding:13px 18px;border-radius:999px;background:#fff;border:1.5px solid #ef8f8f;color:#c35a5a;
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:13px;box-shadow:0 8px 20px rgba(139,23,59,.07);
+      transition:transform .22s ease,box-shadow .22s ease,background .22s ease;
+    }
+    .pill-btn:active,.pill-btn:hover{transform:translateY(-2px);box-shadow:0 12px 22px rgba(139,23,59,.11)}
+    .dots{display:flex;justify-content:center;gap:8px;margin-top:12px}
+    .dot{width:8px;height:8px;border-radius:50%;background:rgba(196,93,127,.25);transition:all .25s ease}
+    .dot.active{width:20px;border-radius:999px;background:#d26868}
+
+    .rsvp-section{
+      margin:0;padding:42px 18px 52px;border-radius:0;position:relative;
+      background:linear-gradient(180deg,#fff3f3 0%,#ffe6e6 100%);
+      box-shadow:none;
+    }
+    .rsvp-card{max-width:460px;margin:0 auto;background:rgba(255,255,255,.34);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1.5px solid rgba(239,143,143,.45);border-radius:30px;padding:22px 16px 20px;box-shadow:0 18px 36px rgba(145,47,60,.08)}
+    .field{margin-bottom:16px}
+    .label{display:block;font-weight:600;color:#963d3d;margin-bottom:8px;font-size:14px}
+    .input{
+      width:100%;border:1.5px solid #efb4b4;border-radius:18px;padding:15px 16px;font-size:15px;color:#7e3b3b;background:#fff;
+      outline:none;transition:border-color .25s ease,box-shadow .25s ease
+    }
+    .input:focus{border-color:#e88989;box-shadow:0 0 0 4px rgba(239,143,143,.15)}
+    .question{margin:20px 0 22px}
+    .question-title{font-size:14px;line-height:1.65;color:#925050;margin:0 0 12px}
+    .option-row{display:grid;grid-template-columns:1fr;gap:10px}
+    .option-btn{
+      width:100%;padding:14px 16px;border-radius:999px;border:1.5px solid #ef9a9a;background:#fff;color:#c35a5a;
+      font-weight:600;font-size:14px;text-align:center;transition:all .25s ease;box-shadow:0 8px 20px rgba(139,23,59,.05)
+    }
+    .option-btn.selected{background:linear-gradient(135deg,#f3a4a4 0%,#d96b6b 100%);color:#fff;border-color:transparent;box-shadow:0 16px 26px rgba(145,47,60,.14)}
+    .send-btn{
+      margin-top:8px;width:100%;padding:17px 18px;border:0;border-radius:999px;font-family:'Cinzel',serif;
+      letter-spacing:1.5px;font-size:15px;color:#fff;background:linear-gradient(135deg,#f19b9b 0%,#cf6262 100%);
+      box-shadow:0 16px 30px rgba(139,23,59,.18);transition:transform .25s ease,filter .25s ease,opacity .25s ease
+    }
+    .send-btn:disabled{opacity:.48;filter:saturate(.85);box-shadow:none}
+    .send-btn:not(:disabled):active,.send-btn:not(:disabled):hover{transform:translateY(-2px)}
+
+    .meet-section{
+      margin:0;padding:42px 18px 52px;border-radius:0;background:linear-gradient(180deg,#fff4f4 0%,#ffe8e8 100%);
+      box-shadow:none;text-align:center;
+    }
+    .footer-section{
+      margin:0 14px 28px;padding:34px 18px;border-radius:36px;background:linear-gradient(180deg,#fff5f5 0%,#ffeaea 100%);
+      box-shadow:0 14px 44px rgba(139,23,59,.08);text-align:center;
+    }
+    .meet-image{max-width:min(100%,520px);margin:24px auto 0;border-radius:34px;overflow:hidden;box-shadow:none}
+    .meet-image img{width:100%;height:min(78svh,920px);aspect-ratio:9/16;object-fit:cover;border-radius:34px}
+    .footer-copy{font-family:'Cinzel',serif;color:#912f3c;letter-spacing:1px;line-height:1.9}
+    .footer-copy .love{font-family:'Great Vibes',cursive;font-size:40px;letter-spacing:0;text-transform:none;color:#c66060;display:block;margin-bottom:8px}
+    .made-by{font-size:13px;color:#a96464;letter-spacing:1.4px;text-transform:none;margin-top:12px}
+
+    @keyframes floatSeal{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+    @keyframes premiumShine{0%{transform:translateX(-35%) rotate(0deg)}100%{transform:translateX(35%) rotate(0deg)}}
+    @keyframes marigoldFall{
+      0%{transform:translate3d(var(--x-start),-18vh,var(--depth-start)) scale(var(--scale));opacity:0}
+      7%{opacity:var(--opacity)}
+      100%{transform:translate3d(calc(var(--x-start) + var(--x-drift)),112vh,var(--depth-end)) scale(var(--scale));opacity:0}
+    }
+    @keyframes marigoldSway{
+      0%{transform:translateX(calc(var(--sway-distance) * -1)) translateY(0) rotateZ(calc(var(--z-tilt) * -0.28))}
+      50%{transform:translateX(calc(var(--sway-distance) * 0.35)) translateY(10px) rotateZ(calc(var(--z-tilt) * 0.16))}
+      100%{transform:translateX(var(--sway-distance)) translateY(0) rotateZ(var(--z-tilt))}
+    }
+    @keyframes marigoldSpinX{0%{transform:rotateX(var(--rx-start))}100%{transform:rotateX(var(--rx-end))}}
+    @keyframes marigoldSpinY{0%{transform:rotateY(var(--ry-start))}100%{transform:rotateY(var(--ry-end))}}
+    @keyframes marigoldSpinZ{0%{transform:rotateZ(var(--rz-start))}100%{transform:rotateZ(var(--rz-end))}}
+    @keyframes confetti{0%{transform:translate3d(0,0,0) rotate(0deg);opacity:1}100%{transform:translate3d(var(--tx),var(--ty),0) rotate(var(--rot));opacity:0}}
+    @media (min-width:700px){
+      .landing-copy h1{font-size:52px}
+      .title{font-size:34px}
+      .subtitle{max-width:520px}
+      .rsvp-card{padding:28px 24px 24px}
+      .option-row{grid-template-columns:1fr 1fr}
+      .footer-section{max-width:760px;margin-left:auto;margin-right:auto}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
+    }
+  </style>
+</head>
+<body class="no-scroll">
+  <div class="page-shell">
+    <div class="landing" id="landing">
+      <div class="landing-inner">
+        <button class="seal-button" id="openInvitation" aria-label="Open invitation">
+          <img src="https://raw.githubusercontent.com/maryam-FOLDS/Bhargav-Bhuvana/main/imageenv0.png" alt="Wedding scroll invitation" />
+        </button>
+        <div class="landing-copy">
+          <div class="mini">Bhargav &amp; Bhuvana</div>
+          <h1>Tap to open</h1>
+          <p>your invitation</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="marigold-rain" id="marigoldRain" aria-hidden="true"></div>
+
+    <main class="main-content" id="mainContent">
+      <section class="banner-wrap">
+        <div class="banner-card">
+          <img src="https://raw.githubusercontent.com/maryam-FOLDS/Bhargav-Bhuvana/main/image1us.png" alt="Bhargav and Bhuvana invitation banner" />
+        </div>
+      </section>
+
+      <section class="lux-section scratch-area" id="scratchSection">
+        <span class="scratch-deco deco-leaf-top">❦</span>
+        <span class="scratch-deco deco-butterfly">🦋</span>
+        <span class="scratch-deco deco-sakura-top">✿</span>
+        <span class="scratch-deco deco-sakura-mid">✧</span>
+        <span class="scratch-deco deco-flower-bottom">❀</span>
+        <span class="scratch-deco deco-leaf-bottom">❦</span>
+        <div class="scratch-card-wrap">
+          <div class="scratch-card" id="scratchCard">
+            <div class="confetti-layer" id="confettiLayer"></div>
+            <div class="reveal-content">
+              <span class="sakura s1">✿</span>
+              <span class="sakura s2">✿</span>
+              <span class="sakura s3">✿</span>
+              <span class="sakura s4">✿</span>
+              <h2 class="save-date">SAVE THE DATE</h2>
+              <p class="reveal-date">14 August 2026</p>
+            </div>
+            <div class="scratch-overlay-text">✦&nbsp; SCRATCH TO REVEAL &nbsp;✦</div>
+            <canvas class="scratch-canvas" id="scratchCanvas"></canvas>
+          </div>
+        </div>
+        <div class="countdown-wrap" id="countdownWrap">
+          <div class="countdown-grid">
+            <div class="count-card"><div class="count-number" id="days">00</div><div class="count-label">DAYS</div></div>
+            <div class="count-card"><div class="count-number" id="hours">00</div><div class="count-label">HOURS</div></div>
+            <div class="count-card"><div class="count-number" id="minutes">00</div><div class="count-label">MINUTES</div></div>
+            <div class="count-card"><div class="count-number" id="seconds">00</div><div class="count-label">SECONDS</div></div>
+          </div>
+          <div class="count-complete">Today is the Celebration.</div>
+        </div>
+      </section>
+
+      <section class="events-section">
+        <div class="section-heading">
+          <div class="eyebrow">Our Celebrations</div>
+          <h2 class="title">Event Schedule</h2>
+        </div>
+        <div class="carousel" id="eventCarousel">
+          <button class="nav-prev" id="prevEvent" aria-label="Previous event">‹</button>
+          <div class="event-frame">
+            <button class="nav-next" id="nextEvent" aria-label="Next event">›</button>
+            <img id="eventImage" src="" alt="Wedding event card" />
+          </div>
+          <div class="event-meta">
+            <h3 class="event-name" id="eventName"></h3>
+            <p class="event-date" id="eventDate"></p>
+            <div class="event-actions">
+              <a class="pill-btn" id="calendarBtn" href="#" target="_blank" rel="noopener">📅 Add to Calendar</a>
+              <a class="pill-btn" id="directionsBtn" href="#" target="_blank" rel="noopener">➜ Directions</a>
+            </div>
+            <div class="dots" id="eventDots"></div>
+          </div>
+        </div>
+      </section>
+      <section class="rsvp-section" id="rsvpSection">
+        <div class="section-heading">
+          <div class="eyebrow">Kindly Respond</div>
+          <h2 class="title">RSVP</h2>
+          <p class="subtitle">Let us know which celebrations you'll be joining — every reply makes our hearts smile.</p>
+        </div>
+        <div class="rsvp-card">
+          <div class="field"><label class="label" for="guestName">Your Name</label><input class="input" id="guestName" placeholder="Full name" /></div>
+          <div class="field"><label class="label" for="guestEmail">Email</label><input class="input" id="guestEmail" type="email" placeholder="you@email.com" /></div>
+          <div class="field"><label class="label" for="guestCount">Number of Guests Attending</label><input class="input" id="guestCount" type="number" min="0" inputmode="numeric" placeholder="0" /></div>
+          <div id="questionsMount"></div>
+          <button class="send-btn" id="sendRsvp" disabled>Send RSVP</button>
+        </div>
+      </section>
+
+      <section class="meet-section">
+        <div class="section-heading">
+          <div class="eyebrow">A Beautiful Beginning</div>
+          <h2 class="title">Meet Bride and Groom</h2>
+        </div>
+        <div class="meet-image">
+          <img src="https://raw.githubusercontent.com/maryam-FOLDS/Bhargav-Bhuvana/main/ghibli.png" alt="Bhargav and Bhuvana illustrated portrait" />
+        </div>
+      </section>
+
+      <section class="footer-section">
+        <div class="footer-copy">
+          <span class="love">With love</span>
+          Bhargav &amp; Bhuvana
+          <div class="made-by">Made by @themaryam.in<br>+91 7359033087</div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <audio id="weddingSong" preload="auto">
+    <source src="https://raw.githubusercontent.com/maryam-FOLDS/Vasanth-Delanis/main/T2.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const events = [
+      { name:'Haldi', date:'13 August 2026', image:'https://raw.githubusercontent.com/maryam-FOLDS/Bhargav-Bhuvana/main/image2us.png', map:'https://maps.app.goo.gl/qiKMHTUounkvWPeR8?g_st=iw' },
+      { name:'Pellikoduku', date:'13 August 2026', image:'https://raw.githubusercontent.com/maryam-FOLDS/Bhargav-Bhuvana/main/image3us.png', map:'https://maps.app.goo.gl/YVrTdzqe6qrXeKTbA?g_st=iw' },
+      { name:'Pellikuthuru', date:'13 August 2026', image:'https://raw.githubusercontent.com/maryam-FOLDS/Bhargav-Bhuvana/main/image4us.png', map:'https://maps.app.goo.gl/qiKMHTUounkvWPeR8?g_st=iw' },
+      { name:'Mehendi', date:'13 August 2026', image:'https://raw.githubusercontent.com/maryam-FOLDS/Bhargav-Bhuvana/main/image5ue.png', map:'https://maps.app.goo.gl/qiKMHTUounkvWPeR8?g_st=iw' },
+      { name:'Kalyanam', date:'14 August 2026', image:'https://raw.githubusercontent.com/maryam-FOLDS/Bhargav-Bhuvana/main/image7us.jpg', map:'https://maps.app.goo.gl/VLAmP6fTgfLfRpCt6?g_st=iw' },
+      { name:'Vratham', date:'15 August 2026', image:'https://raw.githubusercontent.com/maryam-FOLDS/Bhargav-Bhuvana/main/image6us.png', map:'https://maps.app.goo.gl/YVrTdzqe6qrXeKTbA?g_st=iw' }
+    ];
+
+    const rsvpQuestions = [
+      { key:'wedding', title:'We are so honored to invite you to our wedding. Will you be joining the celebrations?', yes:'Joyfully Accept!', no:'Sadly, we cannot make it.' },
+      { key:'haldi', title:'Will you join us for Haldi? (13 August, 8:00 AM – 11:00 AM)', yes:'Yes, count us in!', no:'Sadly, we cannot make this one.' },
+      { key:'pellikoduku', title:'Will you be at the traditional Pellikoduku & Pellikuthuru? (13 August)', yes:'Yes, we\'ll be there!', no:'Sadly, we cannot make this one.' },
+      { key:'mehendi', title:'Ready for an evening of henna and dancing at the Mehendi? (13 August)', yes:'Yes, let\'s celebrate!', no:'Sadly, we cannot make this one.' },
+      { key:'kalyanam', title:'Will you be present to bless our sacred Wedding Ceremony (Kalyanam)? (14 August)', yes:'Yes, we would be honored.', no:'Sadly, we cannot make this one.' },
+      { key:'vratham', title:'Will you join us for the Vratham? (15 August)', yes:'Yes, we will be there!', no:'Sadly, we cannot make this one.' }
+    ];
+
+    const state = { eventIndex:0, revealDone:false, answers:{} };
+
+    const landing = document.getElementById('landing');
+    const openInvitation = document.getElementById('openInvitation');
+    const weddingSong = document.getElementById('weddingSong');
+    const marigoldRain = document.getElementById('marigoldRain');
+    const scratchCard = document.getElementById('scratchCard');
+    const scratchCanvas = document.getElementById('scratchCanvas');
+    const countdownWrap = document.getElementById('countdownWrap');
+    const confettiLayer = document.getElementById('confettiLayer');
+    const questionsMount = document.getElementById('questionsMount');
+    const sendRsvp = document.getElementById('sendRsvp');
+    const eventImage = document.getElementById('eventImage');
+    const eventName = document.getElementById('eventName');
+    const eventDate = document.getElementById('eventDate');
+    const calendarBtn = document.getElementById('calendarBtn');
+    const directionsBtn = document.getElementById('directionsBtn');
+    const eventDots = document.getElementById('eventDots');
+
+    function openInvite(){
+      document.body.classList.remove('no-scroll');
+      document.body.classList.add('invitation-open');
+      landing.classList.add('opened');
+      marigoldRain.classList.add('active');
+      startMarigoldRain();
+      try { weddingSong.currentTime = 0; weddingSong.play(); } catch(e) {}
+      setTimeout(() => window.scrollTo({ top:0, behavior:'smooth' }), 80);
+    }
+    openInvitation.addEventListener('click', openInvite, { once:true });
+
+    let marigoldSpawner = null;
+    let marigoldBloomId = 0;
+
+    function rand(min, max){ return Math.random() * (max - min) + min; }
+    function pick(list){ return list[Math.floor(Math.random() * list.length)]; }
+    const marigoldSpriteCache = [];
+
+    function createMarigoldRng(seed){
+      let s = (seed >>> 0) || 1;
+      return function(min = 0, max = 1){
+        s = (s * 1664525 + 1013904223) >>> 0;
+        const t = s / 4294967296;
+        return min + (max - min) * t;
+      };
+    }
+
+    function shiftHex(hex, amount){
+      const clean = hex.replace('#','');
+      const toChannel = index => Math.max(0, Math.min(255, parseInt(clean.slice(index, index + 2), 16) + amount));
+      const r = toChannel(0).toString(16).padStart(2,'0');
+      const g = toChannel(2).toString(16).padStart(2,'0');
+      const b = toChannel(4).toString(16).padStart(2,'0');
+      return `#${r}${g}${b}`;
+    }
+
+    function rgba(hex, alpha){
+      const clean = hex.replace('#','');
+      const r = parseInt(clean.slice(0,2),16);
+      const g = parseInt(clean.slice(2,4),16);
+      const b = parseInt(clean.slice(4,6),16);
+      return `rgba(${r},${g},${b},${alpha})`;
+    }
+
+    function buildMarigoldSprite(seed){
+      const rnd = createMarigoldRng(seed * 4099 + 97);
+      const canvas = document.createElement('canvas');
+      canvas.width = 220;
+      canvas.height = 236;
+      const ctx2d = canvas.getContext('2d');
+      const cx = 110 + rnd(-4, 4);
+      const cy = 108 + rnd(-5, 4);
+      const bloomRadius = rnd(72, 84);
+      const palettes = [
+        ['#9f4608','#b6550d','#ce6411','#e87517','#f39a22','#f7bf41'],
+        ['#a34909','#bb580d','#d76711','#eb7b18','#f2a126','#f6c64a'],
+        ['#95430b','#b1500d','#cc5f10','#e47017','#ef9627','#f5bc45'],
+        ['#8c3908','#a84a0d','#c65c12','#df7318','#ee9729','#f4bc49']
+      ];
+      const palette = palettes[Math.floor(rnd(0, palettes.length))];
+
+      function drawCalyx(){
+        for(let i = 0; i < 6; i++){
+          const angle = (Math.PI * 2 * i) / 6 + rnd(-0.26, 0.26);
+          const dist = bloomRadius * rnd(0.44, 0.58);
+          const x = cx + Math.cos(angle) * dist * 0.82;
+          const y = cy + Math.sin(angle) * dist * 0.66 + bloomRadius * 0.28;
+          const leafLength = rnd(28, 40);
+          const leafWidth = rnd(11, 18);
+          ctx2d.save();
+          ctx2d.translate(x, y);
+          ctx2d.rotate(angle + Math.PI / 2 + rnd(-0.22, 0.22));
+          const grad = ctx2d.createLinearGradient(0, leafWidth * 0.8, 0, -leafLength);
+          grad.addColorStop(0, 'rgba(45,98,28,0.94)');
+          grad.addColorStop(0.45, 'rgba(84,145,54,0.72)');
+          grad.addColorStop(1, 'rgba(122,171,80,0.04)');
+          ctx2d.fillStyle = grad;
+          ctx2d.globalAlpha = rnd(0.4, 0.72);
+          ctx2d.beginPath();
+          ctx2d.moveTo(0, leafWidth * 0.7);
+          ctx2d.bezierCurveTo(-leafWidth * 0.95, leafWidth * 0.18, -leafWidth * 0.88, -leafLength * 0.72, 0, -leafLength);
+          ctx2d.bezierCurveTo(leafWidth * 0.88, -leafLength * 0.72, leafWidth * 0.95, leafWidth * 0.18, 0, leafWidth * 0.7);
+          ctx2d.closePath();
+          ctx2d.fill();
+          ctx2d.restore();
+        }
+      }
+
+      function drawPetalRing(count, radiusRange, lengthRange, widthRange, colorOffsets, alphaRange, jitter){
+        for(let i = 0; i < count; i++){
+          const angle = (Math.PI * 2 * i) / count + rnd(-jitter, jitter);
+          const radius = rnd(radiusRange[0], radiusRange[1]);
+          const x = cx + Math.cos(angle) * radius * rnd(0.92, 1.04);
+          const y = cy + Math.sin(angle) * radius * rnd(0.82, 1.08);
+          const length = rnd(lengthRange[0], lengthRange[1]);
+          const width = rnd(widthRange[0], widthRange[1]);
+          const curl = rnd(-width * 0.36, width * 0.36);
+          const baseLift = rnd(length * 0.18, length * 0.36);
+          const baseColor = shiftHex(pick(palette), Math.round(rnd(colorOffsets[0], colorOffsets[1])));
+          const midColor = shiftHex(baseColor, Math.round(rnd(7, 18)));
+          const tipColor = shiftHex(baseColor, Math.round(rnd(18, 34)));
+
+          ctx2d.save();
+          ctx2d.translate(x, y);
+          ctx2d.rotate(angle + Math.PI / 2 + rnd(-0.4, 0.4));
+          ctx2d.globalAlpha = rnd(alphaRange[0], alphaRange[1]);
+          ctx2d.shadowColor = rgba('#8f4300', rnd(0.08, 0.18));
+          ctx2d.shadowBlur = rnd(5, 10);
+          ctx2d.shadowOffsetY = rnd(1, 3);
+
+          const fillGrad = ctx2d.createLinearGradient(0, width * 0.85, 0, -length);
+          fillGrad.addColorStop(0, baseColor);
+          fillGrad.addColorStop(0.52, midColor);
+          fillGrad.addColorStop(1, tipColor);
+          ctx2d.fillStyle = fillGrad;
+
+          ctx2d.beginPath();
+          ctx2d.moveTo(0, baseLift);
+          ctx2d.bezierCurveTo(-width * 1.08, baseLift * 0.68, -width * 1.14, -length * 0.2, -width * 0.42, -length * 0.76);
+          ctx2d.quadraticCurveTo(-width * 0.1 + curl, -length * 1.06, width * 0.16, -length * 0.88);
+          ctx2d.quadraticCurveTo(width * 0.44 + curl * 0.5, -length * 1.04, width * 0.78, -length * 0.74);
+          ctx2d.bezierCurveTo(width * 1.08, -length * 0.22, width * 0.96, baseLift * 0.54, 0, baseLift);
+          ctx2d.closePath();
+          ctx2d.fill();
+
+          ctx2d.shadowColor = 'transparent';
+          ctx2d.lineWidth = rnd(0.5, 1.3);
+          ctx2d.strokeStyle = rgba('#fff2c9', rnd(0.12, 0.26));
+          ctx2d.beginPath();
+          ctx2d.moveTo(-width * 0.08, baseLift * 0.52);
+          ctx2d.quadraticCurveTo(rnd(-2, 2), -length * 0.18, width * 0.08, -length * 0.86);
+          ctx2d.stroke();
+          ctx2d.restore();
+        }
+      }
+
+      drawCalyx();
+      drawPetalRing(58, [48, 66], [34, 46], [13, 18], [-12, 8], [0.84, 0.96], 0.22);
+      drawPetalRing(52, [34, 54], [28, 40], [11, 16], [-8, 12], [0.82, 0.95], 0.28);
+      drawPetalRing(46, [22, 42], [23, 34], [9, 14], [-6, 16], [0.8, 0.94], 0.34);
+      drawPetalRing(34, [10, 28], [18, 28], [7, 12], [0, 20], [0.78, 0.92], 0.42);
+      drawPetalRing(22, [0, 14], [14, 22], [6, 10], [6, 28], [0.75, 0.9], 0.62);
+
+      for(let i = 0; i < 22; i++){
+        const angle = rnd(0, Math.PI * 2);
+        const dist = rnd(18, bloomRadius * 0.9);
+        const x = cx + Math.cos(angle) * dist;
+        const y = cy + Math.sin(angle) * dist * rnd(0.84, 1.06);
+        const glow = ctx2d.createRadialGradient(x, y, 0, x, y, rnd(8, 16));
+        glow.addColorStop(0, rgba('#fff1b8', rnd(0.12, 0.22)));
+        glow.addColorStop(1, 'rgba(255,241,184,0)');
+        ctx2d.fillStyle = glow;
+        ctx2d.beginPath();
+        ctx2d.arc(x, y, rnd(7, 14), 0, Math.PI * 2);
+        ctx2d.fill();
+      }
+
+      const topLight = ctx2d.createRadialGradient(cx - bloomRadius * 0.28, cy - bloomRadius * 0.34, 6, cx - bloomRadius * 0.16, cy - bloomRadius * 0.12, bloomRadius * 1.02);
+      topLight.addColorStop(0, 'rgba(255,244,195,0.28)');
+      topLight.addColorStop(0.38, 'rgba(255,233,160,0.12)');
+      topLight.addColorStop(1, 'rgba(255,233,160,0)');
+      ctx2d.fillStyle = topLight;
+      ctx2d.beginPath();
+      ctx2d.ellipse(cx, cy, bloomRadius * 1.02, bloomRadius * 0.98, rnd(-0.18, 0.18), 0, Math.PI * 2);
+      ctx2d.fill();
+
+      const lowerShade = ctx2d.createRadialGradient(cx + bloomRadius * 0.22, cy + bloomRadius * 0.3, 10, cx + bloomRadius * 0.16, cy + bloomRadius * 0.24, bloomRadius * 1.12);
+      lowerShade.addColorStop(0, 'rgba(150,68,0,0)');
+      lowerShade.addColorStop(0.64, 'rgba(150,68,0,0.03)');
+      lowerShade.addColorStop(1, 'rgba(108,44,0,0.22)');
+      ctx2d.fillStyle = lowerShade;
+      ctx2d.beginPath();
+      ctx2d.ellipse(cx, cy, bloomRadius * 1.05, bloomRadius, rnd(-0.12, 0.12), 0, Math.PI * 2);
+      ctx2d.fill();
+
+      return canvas.toDataURL('image/png');
+    }
+
+    function ensureMarigoldSpriteCache(){
+      if(marigoldSpriteCache.length) return;
+      for(let i = 0; i < 18; i++) marigoldSpriteCache.push(buildMarigoldSprite(i + 1));
+    }
+
+    function buildMarigoldSvg(uid){
+      ensureMarigoldSpriteCache();
+      const numericId = Number(String(uid).replace(/\D/g,'')) || 1;
+      const src = marigoldSpriteCache[numericId % marigoldSpriteCache.length];
+      return `<img class="marigold-svg" src="${src}" alt="" aria-hidden="true" draggable="false" decoding="async" />`;
+    }
+
+    function createMarigold(){
+      marigoldBloomId += 1;
+      const flower = document.createElement('span');
+      const size = rand(34, 74);
+      const left = rand(-8, 98);
+      const fallDuration = rand(10.8, 18.8);
+      const swayDuration = rand(4.8, 8.4);
+      const scale = rand(0.72, 1.02);
+      const depth = rand(-120, 160);
+      const layer = depth > 70 ? 4 : depth > 10 ? 3 : 2;
+      flower.className = `marigold ${layer >= 4 ? 'near' : depth < -40 ? 'far' : 'mid'}`;
+      flower.style.left = left + 'vw';
+      flower.style.width = size + 'px';
+      flower.style.height = size * 1.12 + 'px';
+      flower.style.setProperty('--x-start', rand(-22, 22).toFixed(1) + 'px');
+      flower.style.setProperty('--x-drift', rand(-132, 132).toFixed(1) + 'px');
+      flower.style.setProperty('--depth-start', (depth * 0.35).toFixed(1) + 'px');
+      flower.style.setProperty('--depth-end', depth.toFixed(1) + 'px');
+      flower.style.setProperty('--fall-duration', fallDuration.toFixed(2) + 's');
+      flower.style.setProperty('--sway-duration', swayDuration.toFixed(2) + 's');
+      flower.style.setProperty('--spin-x-duration', rand(5.4, 8.8).toFixed(2) + 's');
+      flower.style.setProperty('--spin-y-duration', rand(6.1, 9.6).toFixed(2) + 's');
+      flower.style.setProperty('--spin-z-duration', rand(9.4, 14.8).toFixed(2) + 's');
+      flower.style.setProperty('--sway-distance', rand(14, 40).toFixed(1) + 'px');
+      flower.style.setProperty('--z-tilt', rand(-12, 12).toFixed(1) + 'deg');
+      flower.style.setProperty('--rx-start', rand(-34, 26).toFixed(1) + 'deg');
+      flower.style.setProperty('--rx-end', rand(-18, 34).toFixed(1) + 'deg');
+      flower.style.setProperty('--ry-start', rand(-30, 30).toFixed(1) + 'deg');
+      flower.style.setProperty('--ry-end', rand(-26, 34).toFixed(1) + 'deg');
+      flower.style.setProperty('--rz-start', rand(-24, 24).toFixed(1) + 'deg');
+      flower.style.setProperty('--rz-end', rand(180, 420).toFixed(1) + 'deg');
+      flower.style.setProperty('--scale', scale.toFixed(2));
+      flower.style.setProperty('--opacity', rand(0.74, 0.98).toFixed(2));
+      flower.style.setProperty('--layer', String(layer));
+      const uid = `m${marigoldBloomId}`;
+      flower.innerHTML = `<span class="marigold-drift"><span class="marigold-spin-x"><span class="marigold-spin-y"><span class="marigold-spin-z">${buildMarigoldSvg(uid)}</span></span></span></span>`;
+      flower.addEventListener('animationend', event => {
+        if(event.animationName === 'marigoldFall') flower.remove();
+      });
+      return flower;
+    }
+
+    function spawnMarigold(){
+      if(!document.body.classList.contains('invitation-open')) return;
+      if(marigoldRain.childElementCount > 44) return;
+      const flower = createMarigold();
+      marigoldRain.appendChild(flower);
+    }
+
+    function startMarigoldRain(){
+      if(marigoldSpawner) return;
+      ensureMarigoldSpriteCache();
+      for(let i = 0; i < 18; i++){
+        setTimeout(() => spawnMarigold(), i * 120);
+      }
+      marigoldSpawner = window.setInterval(() => {
+        if(!document.hidden) spawnMarigold();
+      }, 240);
+    }
+
+    function formatCalendarDate(dateStr){
+      const [day, monthName, year] = dateStr.split(' ');
+      const months = {January:'01',February:'02',March:'03',April:'04',May:'05',June:'06',July:'07',August:'08',September:'09',October:'10',November:'11',December:'12'};
+      return `${year}${months[monthName]}${String(day).padStart(2,'0')}`;
+    }
+    function nextDay(dateStr){
+      const [day, monthName, year] = dateStr.split(' ');
+      const map = {January:0,February:1,March:2,April:3,May:4,June:5,July:6,August:7,September:8,October:9,November:10,December:11};
+      const d = new Date(Number(year), map[monthName], Number(day));
+      d.setDate(d.getDate()+1);
+      return `${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}`;
+    }
+    function eventCalendarLink(ev){
+      const start = formatCalendarDate(ev.date);
+      const end = nextDay(ev.date);
+      const url = new URL('https://calendar.google.com/calendar/render');
+      url.searchParams.set('action','TEMPLATE');
+      url.searchParams.set('text', `${ev.name} | Bhargav & Bhuvana Wedding`);
+      url.searchParams.set('dates', `${start}/${end}`);
+      url.searchParams.set('details', 'Wedding celebration invitation');
+      url.searchParams.set('location', ev.map);
+      return url.toString();
+    }
+    function renderDots(){
+      eventDots.innerHTML = events.map((_,i) => `<span class="dot ${i===state.eventIndex?'active':''}"></span>`).join('');
+    }
+    function renderEvent(){
+      const ev = events[state.eventIndex];
+      eventImage.src = ev.image;
+      eventName.textContent = ev.name;
+      eventDate.textContent = ev.date;
+      directionsBtn.href = ev.map;
+      calendarBtn.href = eventCalendarLink(ev);
+      renderDots();
+    }
+    document.getElementById('nextEvent').addEventListener('click', () => { state.eventIndex = (state.eventIndex + 1) % events.length; renderEvent(); });
+    document.getElementById('prevEvent').addEventListener('click', () => { state.eventIndex = (state.eventIndex - 1 + events.length) % events.length; renderEvent(); });
+    let touchStartX = 0;
+    document.getElementById('eventCarousel').addEventListener('touchstart', e => touchStartX = e.changedTouches[0].clientX, { passive:true });
+    document.getElementById('eventCarousel').addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 36) {
+        state.eventIndex = dx < 0 ? (state.eventIndex + 1) % events.length : (state.eventIndex - 1 + events.length) % events.length;
+        renderEvent();
+      }
+    }, { passive:true });
+    renderEvent();
+
+    function mountQuestions(){
+      questionsMount.innerHTML = rsvpQuestions.map((q, index) => `
+        <div class="question" data-key="${q.key}">
+          <p class="question-title">${q.title}</p>
+          <div class="option-row">
+            <button type="button" class="option-btn" data-value="yes" data-index="${index}">${q.yes}</button>
+            <button type="button" class="option-btn" data-value="no" data-index="${index}">${q.no}</button>
+          </div>
+        </div>
+      `).join('');
+      questionsMount.querySelectorAll('.option-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const index = btn.dataset.index;
+          const q = rsvpQuestions[index];
+          state.answers[q.key] = btn.textContent.trim();
+          btn.parentElement.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+          btn.classList.add('selected');
+          validateForm();
+        });
+      });
+    }
+    mountQuestions();
+
+    ['guestName','guestEmail','guestCount'].forEach(id => document.getElementById(id).addEventListener('input', validateForm));
+    function validateForm(){
+      const name = document.getElementById('guestName').value.trim();
+      const email = document.getElementById('guestEmail').value.trim();
+      const guests = document.getElementById('guestCount').value.trim();
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      const answeredAll = rsvpQuestions.every(q => state.answers[q.key]);
+      sendRsvp.disabled = !(name && emailOk && guests !== '' && answeredAll);
+    }
+    sendRsvp.addEventListener('click', () => {
+      const name = document.getElementById('guestName').value.trim();
+      const email = document.getElementById('guestEmail').value.trim();
+      const guests = document.getElementById('guestCount').value.trim();
+      const msg = `Hello!\n\nMy name is: ${name}\nMy email ID is: ${email}\nWe will be attending with ${guests} guests.\n\nWedding Invitation:\n${state.answers.wedding}\n\nHaldi:\n${state.answers.haldi}\n\nPellikoduku & Pellikuthuru:\n${state.answers.pellikoduku}\n\nMehendi:\n${state.answers.mehendi}\n\nWedding Ceremony (Kalyanam):\n${state.answers.kalyanam}\n\nVratham:\n${state.answers.vratham}\n\nThank you.`;
+      window.open(`https://wa.me/17043078847?text=${encodeURIComponent(msg)}`, '_blank');
+    });
+
+    const ctx = scratchCanvas.getContext('2d', { willReadFrequently:true });
+    let scratching = false;
+    let lastCheck = 0;
+    let lastScratchPoint = null;
+    function resizeScratchCanvas(){
+      const rect = scratchCanvas.getBoundingClientRect();
+      const ratio = Math.max(window.devicePixelRatio || 1, 1);
+      scratchCanvas.width = rect.width * ratio;
+      scratchCanvas.height = rect.height * ratio;
+      ctx.setTransform(ratio,0,0,ratio,0,0);
+      drawScratchSurface(rect.width, rect.height);
+    }
+    function drawScratchSurface(w,h){
+      const grad = ctx.createLinearGradient(0,0,w,h);
+      grad.addColorStop(0,'#f7c5d3');
+      grad.addColorStop(.38,'#f3adc2');
+      grad.addColorStop(.72,'#ef9cb8');
+      grad.addColorStop(1,'#f7c8d6');
+      ctx.clearRect(0,0,w,h);
+      ctx.fillStyle = grad;
+      ctx.fillRect(0,0,w,h);
+      for(let i=0;i<900;i++){
+        const x = Math.random()*w, y = Math.random()*h, a = Math.random()*.08;
+        ctx.fillStyle = `rgba(255,255,255,${a.toFixed(3)})`;
+        ctx.fillRect(x,y,1.5,1.5);
+      }
+      const shine = ctx.createLinearGradient(0,0,w,0);
+      shine.addColorStop(0,'rgba(255,255,255,0)');
+      shine.addColorStop(.45,'rgba(255,255,255,.26)');
+      shine.addColorStop(.55,'rgba(255,255,255,.07)');
+      shine.addColorStop(1,'rgba(255,255,255,0)');
+      ctx.fillStyle = shine;
+      ctx.fillRect(0,0,w,h);
+    }
+    function scratchAt(clientX, clientY){
+      const rect = scratchCanvas.getBoundingClientRect();
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.lineWidth = 34;
+      if(lastScratchPoint){
+        ctx.beginPath();
+        ctx.moveTo(lastScratchPoint.x, lastScratchPoint.y);
+        ctx.lineTo(x, y);
+        ctx.stroke();
+      }
+      const g = ctx.createRadialGradient(x,y,4,x,y,24);
+      g.addColorStop(0,'rgba(0,0,0,1)');
+      g.addColorStop(1,'rgba(0,0,0,0)');
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.arc(x,y,24,0,Math.PI*2);
+      ctx.fill();
+      ctx.globalCompositeOperation = 'source-over';
+      lastScratchPoint = { x, y };
+      if(Date.now() - lastCheck > 120){ lastCheck = Date.now(); checkScratchProgress(); }
+    }
+    function checkScratchProgress(){
+      if(state.revealDone) return;
+      const { width, height } = scratchCanvas;
+      const image = ctx.getImageData(0,0,width,height).data;
+      let transparent = 0;
+      const sampleStride = 32;
+      for(let i=3;i<image.length;i+=sampleStride){ if(image[i] < 20) transparent++; }
+      const total = image.length / sampleStride;
+      if((transparent/total) > 0.24) revealScratch();
+    }
+    function revealScratch(){
+      if(state.revealDone) return;
+      state.revealDone = true;
+      scratchCard.classList.add('revealed');
+      scratchCanvas.style.transition = 'opacity .6s ease';
+      scratchCanvas.style.opacity = '0';
+      burstConfetti();
+      setTimeout(() => countdownWrap.classList.add('show'), 220);
+    }
+    function burstConfetti(){
+      const colors = ['#8E1B32','#B3264A','#F39AB5','#FFD3DF','#EBCB7D'];
+      const shapes = ['rect','circle','petal','heart'];
+      confettiLayer.innerHTML = '';
+      const width = scratchCard.clientWidth || 340;
+      for(let i=0;i<72;i++){
+        const piece = document.createElement('span');
+        const shape = shapes[Math.floor(Math.random()*shapes.length)];
+        piece.className = `confetti-piece ${shape}`;
+        const sideLeft = i % 2 === 0;
+        const startX = sideLeft ? 20 + Math.random()*40 : width - 60 + Math.random()*40;
+        const size = 6 + Math.random()*12;
+        piece.style.left = startX + 'px';
+        piece.style.top = (10 + Math.random()*24) + 'px';
+        piece.style.width = size + 'px';
+        piece.style.height = (shape === 'rect' ? size*2.2 : size) + 'px';
+        piece.style.background = colors[Math.floor(Math.random()*colors.length)];
+        piece.style.setProperty('--tx', `${(sideLeft ? 90 : -90) + (Math.random()*240 - 120)}px`);
+        piece.style.setProperty('--ty', `${180 + Math.random()*260}px`);
+        piece.style.setProperty('--rot', `${Math.random()*520 - 260}deg`);
+        piece.style.animationDelay = (Math.random()*0.12) + 's';
+        confettiLayer.appendChild(piece);
+      }
+      setTimeout(() => confettiLayer.innerHTML = '', 2800);
+    }
+
+    ['pointerdown','pointermove','pointerup','pointerleave','pointercancel'].forEach(type => {
+      scratchCanvas.addEventListener(type, e => {
+        if(state.revealDone) return;
+        if(type === 'pointerdown'){ scratching = true; lastScratchPoint = null; scratchAt(e.clientX, e.clientY); }
+        if(type === 'pointermove' && scratching) scratchAt(e.clientX, e.clientY);
+        if(type === 'pointerup' || type === 'pointerleave' || type === 'pointercancel'){ scratching = false; lastScratchPoint = null; }
+      });
+    });
+
+    const targetDate = new Date('2026-08-14T00:00:00');
+    function updateCountdown(){
+      const now = new Date();
+      const diff = targetDate - now;
+      if(diff <= 0){
+        countdownWrap.classList.add('complete');
+        document.getElementById('days').textContent = '00';
+        document.getElementById('hours').textContent = '00';
+        document.getElementById('minutes').textContent = '00';
+        document.getElementById('seconds').textContent = '00';
+        return;
+      }
+      const days = Math.floor(diff / (1000*60*60*24));
+      const hours = Math.floor((diff / (1000*60*60)) % 24);
+      const minutes = Math.floor((diff / (1000*60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById('days').textContent = String(days).padStart(2,'0');
+      document.getElementById('hours').textContent = String(hours).padStart(2,'0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2,'0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2,'0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    window.addEventListener('resize', resizeScratchCanvas);
+    resizeScratchCanvas();
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
