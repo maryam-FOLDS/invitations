@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="You are warmly invited to celebrate the wedding of Bharath & Madhuri on 31st August 2026." />
+  <link rel="canonical" href="https://maryam-folds.github.io/Bharath-Madhuri/" />
+  <meta property="og:title" content="Bharath & Madhuri Wedding Invitation" />
+  <meta property="og:description" content="You are warmly invited to celebrate the wedding of Bharath & Madhuri on 31st August 2026." />
+  <meta property="og:url" content="https://maryam-folds.github.io/Bharath-Madhuri/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/maryam-FOLDS/Bharath-Madhuri/main/image0bm.png" />
+  <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/maryam-FOLDS/Bharath-Madhuri/main/image0bm.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1186" />
+  <meta property="og:image:height" content="1326" />
+  <meta property="og:site_name" content="Bharath & Madhuri" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bharath & Madhuri Wedding Invitation" />
+  <meta name="twitter:description" content="You are warmly invited to celebrate the wedding of Bharath & Madhuri on 31st August 2026." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/maryam-FOLDS/Bharath-Madhuri/main/image0bm.png" />
+  <meta name="twitter:url" content="https://maryam-folds.github.io/Bharath-Madhuri/" />
+  <title>Bharath & Madhuri Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --sage:#C1D2B4;
+      --gold:#b79244;
+      --gold-soft:#d7be7a;
+      --brown:#3c261d;
+      --text:#3b3229;
+      --white:#ffffff;
+      --shadow:0 12px 35px rgba(67,50,20,0.12);
+      --radius:26px;
+    }
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+    html,body{margin:0;padding:0;background:var(--sage);color:var(--text);font-family:'Cormorant Garamond',serif;overflow-x:hidden;}
+    body.locked{height:100vh;overflow:hidden;touch-action:none;}
+    body.opened{touch-action:auto;}
+    a{text-decoration:none;color:inherit;}
+    img{display:block;max-width:100%;}
+    .mobile-shell{width:100%;max-width:480px;margin:0 auto;position:relative;background:var(--sage);min-height:100vh;overflow:hidden;box-shadow:0 0 0 rgba(0,0,0,0);}
+    .screen{width:100%;position:relative;}
+
+    .landing{
+      min-height:100vh;
+      background:var(--sage);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:space-between;
+      padding:24px 22px 30px;
+      position:relative;
+      z-index:3;
+      transition:opacity .8s ease, transform .8s ease;
+    }
+    .landing.hidden{opacity:0;pointer-events:none;transform:translateY(-20px);position:absolute;inset:0;}
+    .landing-spacer{height:6vh;min-height:28px;}
+    .envelope-wrap{width:100%;display:flex;justify-content:center;align-items:center;flex:1;}
+    .envelope-btn{
+      border:none;background:transparent;padding:0;cursor:pointer;display:flex;justify-content:center;align-items:center;
+      animation:floaty 3.2s ease-in-out infinite; width:min(62vw,255px);
+    }
+    .envelope-btn img{width:100%;height:auto;filter:drop-shadow(0 14px 22px rgba(72,70,40,.16));}
+    .footer-copy{text-align:center;color:#785f39;padding-bottom:36px;transform:translateY(-18px);}
+    .footer-copy .script{font-family:'Great Vibes',cursive;font-size:2rem;line-height:1.1;margin-bottom:8px;color:#7e5b37;}
+    .footer-copy .sub{font-family:'Cormorant Garamond',serif;font-size:1.08rem;letter-spacing:.03em;color:#6c5b45;}
+
+    .invitation{
+      opacity:0;
+      pointer-events:none;
+      transform:translateY(40px);
+      transition:opacity .9s ease, transform .9s ease;
+      position:relative;
+      z-index:2;
+    }
+    .invitation.active{opacity:1;pointer-events:auto;transform:translateY(0);}
+
+    .falling-layer{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:20;display:none;}
+    .falling-layer.active{display:block;}
+    .petal,.leaf,.flower{
+      position:absolute;top:-12vh;opacity:.9;animation-name:falling, sway;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;
+      transform-origin:center;
+    }
+    .petal{width:16px;height:20px;background:radial-gradient(circle at 40% 35%, #ffd8e6 0 45%, #f5a9c2 70%, #eca0b8 100%);border-radius:55% 45% 60% 40%/60% 55% 45% 40%;box-shadow:0 2px 5px rgba(0,0,0,.08);}
+    .leaf{width:18px;height:28px;background:linear-gradient(135deg,#9cbc86,#5f8d52);border-radius:10% 85% 10% 85%;box-shadow:0 2px 5px rgba(0,0,0,.08);}
+    .flower{width:22px;height:22px;filter:drop-shadow(0 2px 3px rgba(0,0,0,.08));}
+    .flower::before,.flower::after{content:"";position:absolute;inset:0;border-radius:50%;}
+    .flower::before{background:radial-gradient(circle,#f7e37f 0 18%, transparent 19%), radial-gradient(circle at 50% 6%, #fff7d8 0 30%, transparent 31%), radial-gradient(circle at 94% 50%, #fff7d8 0 30%, transparent 31%), radial-gradient(circle at 50% 94%, #fff7d8 0 30%, transparent 31%), radial-gradient(circle at 6% 50%, #fff7d8 0 30%, transparent 31%);}
+    .flower::after{background:radial-gradient(circle,transparent 0 43%, #f4c2d5 44% 58%, transparent 59%), radial-gradient(circle at 50% 8%, #f9d6e2 0 18%, transparent 19%), radial-gradient(circle at 92% 50%, #f9d6e2 0 18%, transparent 19%), radial-gradient(circle at 50% 92%, #f9d6e2 0 18%, transparent 19%), radial-gradient(circle at 8% 50%, #f9d6e2 0 18%, transparent 19%);}
+
+    .corner-botanicals{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0;}
+    .corner-botanicals span{position:absolute;opacity:.34;filter:drop-shadow(0 3px 6px rgba(0,0,0,.06));}
+    .corner-botanicals .c1{left:-10px;top:18px;width:70px;height:70px;background:radial-gradient(circle,#ffd7e7 0 18%, transparent 19%), radial-gradient(circle at 30% 72%, #8fb47f 0 13%, transparent 14%), radial-gradient(circle at 72% 32%, #f4e37d 0 10%, transparent 11%);border-radius:50%;}
+    .corner-botanicals .c2{right:-12px;top:110px;width:78px;height:78px;background:radial-gradient(circle at 28% 38%,#fcd7e1 0 14%, transparent 15%), radial-gradient(circle at 65% 18%, #f4e37d 0 9%, transparent 10%), radial-gradient(circle at 68% 68%, #8caf7c 0 14%, transparent 15%);}
+    .corner-botanicals .c3{left:-8px;bottom:120px;width:66px;height:66px;background:radial-gradient(circle at 40% 30%,#f8d0dc 0 14%, transparent 15%), radial-gradient(circle at 62% 70%, #8fb47f 0 13%, transparent 14%);}
+    .corner-botanicals .c4{right:-10px;bottom:40px;width:78px;height:78px;background:radial-gradient(circle at 50% 38%,#f8d7e4 0 15%, transparent 16%), radial-gradient(circle at 30% 70%, #8caf7c 0 12%, transparent 13%), radial-gradient(circle at 73% 64%, #f4e37d 0 10%, transparent 11%);}
+
+    section{position:relative;padding:24px 18px;overflow:hidden;}
+    .hero{padding:0;background:#fff;min-height:100vh;min-height:100svh;}
+    .hero img{width:100%;height:100vh;height:100svh;object-fit:cover;object-position:center top;}
+
+    .white-section{background:#fff;}
+    .scratch-area{padding:28px 20px 24px;display:flex;flex-direction:column;align-items:center;gap:18px;}
+    .scratch-heading{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;letter-spacing:.04em;color:#8a682f;text-align:center;margin:0 0 4px;}
+    .scratch-card{
+      width:100%;max-width:360px;height:220px;border-radius:24px;position:relative;overflow:hidden;
+      background:#d0d0d0;box-shadow:0 14px 30px rgba(120,120,120,.18);
+      border:1px solid rgba(120,120,120,.26);
+    }
+    .scratch-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(255,255,255,0) 42%,rgba(0,0,0,.06) 100%);pointer-events:none;z-index:1;}
+    .scratch-card::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.22) 1px, transparent 1px),radial-gradient(rgba(0,0,0,.08) 1px, transparent 1px);background-size:14px 14px,18px 18px;background-position:0 0,7px 7px;mix-blend-mode:soft-light;pointer-events:none;z-index:1;}
+    .scratch-underlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;background:radial-gradient(circle at top,#fffdf9 0,#fff7ea 42%,#fff 100%);color:#7b6036;z-index:0;}
+    .scratch-underlay .save{font-family:'Great Vibes',cursive;font-size:3rem;font-weight:400;letter-spacing:.02em;color:#98712f;text-shadow:0 4px 10px rgba(255,255,255,.55);}
+    .scratch-underlay .date{font-family:'Cormorant Garamond',serif;font-size:1.55rem;font-weight:700;letter-spacing:.08em;margin-top:10px;color:#4a3a2d;text-transform:uppercase;}
+    .scratch-overlay{position:absolute;inset:0;background:linear-gradient(135deg,#cfcfcf 0%,#b9b9b9 45%,#dddddd 100%);display:block;z-index:2;}
+    #scratchCanvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;z-index:3;}
+    .countdown-wrap{width:100%;max-width:350px;opacity:0;max-height:0;overflow:hidden;transition:all .55s ease;text-align:center;}
+    .countdown-wrap.revealed{opacity:1;max-height:220px;}
+    .countdown-title{font-family:'Great Vibes',cursive;font-size:2.35rem;color:#8a682f;margin-bottom:14px;}
+    .countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+    .time-box{background:#fffaf0;border:1px solid rgba(183,146,68,.22);border-radius:18px;padding:12px 6px;box-shadow:0 8px 18px rgba(183,146,68,.08);}
+    .time-box .num{display:block;font-size:1.3rem;font-weight:700;color:#5a4837;}
+    .time-box .label{display:block;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#8b744a;margin-top:4px;}
+    .confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:30;}
+    .confetti-piece{position:absolute;width:10px;height:16px;opacity:0;animation:burst 1800ms ease-out forwards;}
+
+    .events{background:var(--sage);padding:18px 16px 38px;}
+    .section-title{font-family:'Great Vibes',cursive;font-size:3rem;font-weight:400;text-align:center;color:#7d5f2f;margin:0 0 28px;letter-spacing:.01em;}
+    .cards{display:flex;flex-direction:column;gap:24px;}
+    .event-card{background:#fff;border-radius:28px;padding:0;overflow:hidden;box-shadow:0 14px 28px rgba(85,75,45,.10);border:1px solid rgba(183,146,68,.10);}
+    .event-card img{width:100%;border-radius:28px;}
+
+    .full-image-section{background:var(--sage);padding:8px 0 0;}
+    .full-image-section img{width:100%;height:auto;display:block;}
+
+    .family{background:var(--sage);padding:38px 18px 54px;text-align:center;}
+    .with-love{font-family:'Cormorant Garamond',serif;font-size:1.1rem;letter-spacing:.26em;text-transform:uppercase;color:#5e4a36;margin-bottom:8px;}
+    .families{font-family:'Great Vibes',cursive;font-size:2.9rem;font-weight:400;color:#7d5f2f;margin-bottom:24px;}
+    .presence-box{border:1.8px solid rgba(183,146,68,.8);border-radius:28px;padding:24px 20px;background:rgba(255,255,255,.22);backdrop-filter:blur(5px);box-shadow:0 12px 28px rgba(94,78,43,.08);}
+    .presence-box .small{font-size:1.02rem;letter-spacing:.12em;line-height:1.55;color:#6e5534;margin-bottom:14px;font-weight:500;}
+    .presence-box .name{font-family:'Cormorant Garamond',serif;font-size:1.55rem;color:#453426;line-height:1.38;}
+
+    .venue{background:#fff;padding:48px 18px 54px;text-align:center;}
+    .eyebrow{font-size:.82rem;text-transform:uppercase;letter-spacing:.22em;color:#8b6e48;margin-bottom:10px;}
+    .venue h2{font-family:'Great Vibes',cursive;font-size:3.2rem;line-height:1.02;color:#7d5f2f;margin:0 0 16px;}
+    .venue-address{font-size:1.08rem;line-height:1.65;color:#564639;margin:0 auto 22px;max-width:280px;}
+    .map-frame{border-radius:28px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(183,146,68,.14);background:#f8f4ee;}
+    .map-frame iframe{width:100%;height:280px;border:0;display:block;}
+    .map-link{display:inline-flex;align-items:center;justify-content:center;margin-top:16px;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#d8bb7d,#b48831);color:#fffdf8;font-weight:600;font-size:.96rem;box-shadow:0 8px 18px rgba(183,136,49,.22);}
+    .meet-couple{background:var(--sage);padding:24px 18px 44px;text-align:center;}
+    .meet-couple .section-title{margin-bottom:18px;}
+    .couple-subtitle{font-size:1.02rem;line-height:1.65;color:#5a4837;max-width:320px;margin:0 auto 20px;}
+    .couple-canvas-wrap{max-width:360px;margin:0 auto;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(183,146,68,.16);background:#fff7ea;}
+    #coupleCanvas{display:block;width:100%;height:auto;aspect-ratio:4/5;background:linear-gradient(180deg,rgba(255,248,235,.95),rgba(250,239,214,.88));}
+
+
+    .closing{background:var(--brown);padding:44px 18px 52px;text-align:center;color:#f6eee4;}
+    .closing .line1{font-family:'Cormorant Garamond',serif;font-size:1.15rem;letter-spacing:.16em;text-transform:uppercase;opacity:.92;}
+    .closing .line2{font-family:'Great Vibes',cursive;font-size:2.7rem;line-height:1.15;margin:10px 0 12px;color:#fff6e9;}
+    .closing .line3{font-family:'Cormorant Garamond',serif;font-size:1.08rem;letter-spacing:.02em;opacity:.88;}
+
+    .reveal-up{opacity:0;transform:translateY(24px);transition:all .7s ease;}
+    .reveal-up.show{opacity:1;transform:translateY(0);}
+
+    @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    @keyframes falling{0%{transform:translate3d(0,0,0) rotate(0deg);}100%{transform:translate3d(0,120vh,0) rotate(350deg);}}
+    @keyframes sway{0%,100%{margin-left:-8px;}50%{margin-left:14px;}}
+    @keyframes burst{0%{opacity:1;transform:translate3d(0,0,0) rotate(0deg) scale(1);}100%{opacity:0;transform:translate3d(var(--x),var(--y),0) rotate(var(--r)) scale(.7);}}
+
+    @media (min-width: 481px){
+      body{background:linear-gradient(90deg,#b7caa8 0, #c1d2b4 18%, #c1d2b4 82%, #b7caa8 100%);} 
+      .mobile-shell{box-shadow:0 24px 60px rgba(58,44,27,.16);} 
+    }
+  </style>
+</head>
+<body class="locked">
+  <div class="falling-layer" id="fallingLayer"></div>
+  <div class="confetti" id="confetti"></div>
+
+  <main class="mobile-shell">
+    <section class="landing screen" id="landing">
+      <div class="corner-botanicals"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div>
+      <div class="landing-spacer"></div>
+      <div class="envelope-wrap">
+        <button class="envelope-btn" id="openEnvelope" aria-label="Open invitation">
+          <img src="https://raw.githubusercontent.com/maryam-FOLDS/Bharath-Madhuri/main/image0bm.png" alt="Invitation envelope" />
+        </button>
+      </div>
+      <div class="footer-copy">
+        <div class="script">You're invited</div>
+        <div class="sub">Tap to open your invitation</div>
+      </div>
+    </section>
+
+    <div class="invitation" id="invitation">
+      <section class="hero reveal-up">
+        <img src="https://raw.githubusercontent.com/maryam-FOLDS/Bharath-Madhuri/main/image1bm.png" alt="Bharath and Madhuri invitation visual" />
+      </section>
+
+      <section class="white-section scratch-area reveal-up">
+        <div class="scratch-heading">Scratch to reveal date</div>
+        <div class="scratch-card" id="scratchCard">
+          <div class="scratch-underlay">
+            <div class="save">Save the date</div>
+            <div class="date">31st August 2026</div>
+          </div>
+          <div class="scratch-overlay" id="scratchOverlay">
+            <canvas id="scratchCanvas"></canvas>
+          </div>
+        </div>
+        <div class="countdown-wrap" id="countdownWrap">
+          <div class="countdown-title">Countdown to the celebration</div>
+          <div class="countdown" id="countdown"></div>
+        </div>
+      </section>
+
+      <section class="events reveal-up">
+        <div class="corner-botanicals"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div>
+        <h2 class="section-title">Events schedule</h2>
+        <div class="cards">
+          <div class="event-card"><img src="https://raw.githubusercontent.com/maryam-FOLDS/Bharath-Madhuri/main/image2bm.png" alt="Event schedule card 1" /></div>
+          <div class="event-card"><img src="https://raw.githubusercontent.com/maryam-FOLDS/Bharath-Madhuri/main/image3bm.png" alt="Event schedule card 2" /></div>
+        </div>
+      </section>
+
+      <section class="full-image-section reveal-up">
+        <img src="https://raw.githubusercontent.com/maryam-FOLDS/Subrat-Amanpreet/refs/heads/main/noblepresence.png" alt="Noble presence" />
+      </section>
+
+      <section class="venue reveal-up">
+        <div class="eyebrow">Venue</div>
+        <h2>GT Mahal</h2>
+        <p class="venue-address">GM Mahal, A/C,<br/>Sirumalai Pirivu, Natham Road,<br/>Dindigul - 624003.</p>
+        <div class="map-frame">
+          <iframe title="Venue map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=GM%20Mahal%20A%2FC%2C%20Sirumalai%20Pirivu%2C%20Natham%20Road%2C%20Dindigul%20624003&output=embed"></iframe>
+        </div>
+        <a class="map-link" href="https://maps.app.goo.gl/gZinHxw3mEQUGJob8" target="_blank" rel="noopener">Open location in Google Maps</a>
+      </section>
+
+
+
+      <section class="meet-couple reveal-up">
+        <div class="corner-botanicals"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span></div>
+        <h2 class="section-title">Meet bride and groom</h2>
+        <p class="couple-subtitle">A glimpse of Bharath &amp; Madhuri, beautifully revealed one frame at a time.</p>
+        <div class="couple-canvas-wrap">
+          <canvas id="coupleCanvas" width="720" height="900" aria-label="Bride and groom gallery animation"></canvas>
+        </div>
+      </section>
+
+      <section class="closing reveal-up">
+        <div class="line1">With love</div>
+        <div class="line2">(Bharath&amp;Madhuri)</div>
+        <div class="line3">Made by @themaryam.in +91 7359033087</div>
+      </section>
+    </div>
+  </main>
+
+  <audio id="bgMusic" preload="auto" loop playsinline>
+    <source src="https://raw.githubusercontent.com/maryam-FOLDS/Vasanth-Delanis/refs/heads/main/T2.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script>
+    const body = document.body;
+    const landing = document.getElementById('landing');
+    const invitation = document.getElementById('invitation');
+    const openEnvelope = document.getElementById('openEnvelope');
+    const bgMusic = document.getElementById('bgMusic');
+    const fallingLayer = document.getElementById('fallingLayer');
+    const confetti = document.getElementById('confetti');
+    const countdownWrap = document.getElementById('countdownWrap');
+    const countdownEl = document.getElementById('countdown');
+    let invitationOpened = false;
+    let countdownStarted = false;
+    let countdownInterval = null;
+
+    function createFallingElements() {
+      if (fallingLayer.children.length) return;
+      const types = ['petal','leaf','flower'];
+      const total = 26;
+      for (let i = 0; i < total; i++) {
+        const el = document.createElement('span');
+        const type = types[Math.floor(Math.random() * types.length)];
+        el.className = type;
+        el.style.left = Math.random() * 100 + 'vw';
+        el.style.animationDuration = (8 + Math.random() * 8) + 's,' + (3 + Math.random() * 2.5) + 's';
+        el.style.animationDelay = (-Math.random() * 12) + 's,' + (-Math.random() * 3) + 's';
+        el.style.transform = `scale(${0.7 + Math.random() * 0.75}) rotate(${Math.random()*360}deg)`;
+        fallingLayer.appendChild(el);
+      }
+    }
+
+    function startInvitation() {
+      if (invitationOpened) return;
+      invitationOpened = true;
+      body.classList.remove('locked');
+      body.classList.add('opened');
+      landing.classList.add('hidden');
+      invitation.classList.add('active');
+      fallingLayer.classList.add('active');
+      createFallingElements();
+      bgMusic.currentTime = 0;
+      bgMusic.play().catch(() => {});
+      setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 50);
+    }
+
+    openEnvelope.addEventListener('click', startInvitation);
+
+    function stopMusic() {
+      bgMusic.pause();
+      bgMusic.currentTime = 0;
+    }
+    window.addEventListener('pagehide', stopMusic);
+    window.addEventListener('beforeunload', stopMusic);
+    window.addEventListener('popstate', stopMusic);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) bgMusic.pause();
+      else if (invitationOpened) bgMusic.play().catch(() => {});
+    });
+
+    const scratchCard = document.getElementById('scratchCard');
+    const canvas = document.getElementById('scratchCanvas');
+    const ctx = canvas.getContext('2d', { willReadFrequently: true });
+    const overlay = document.getElementById('scratchOverlay');
+    let drawing = false;
+    let scratchDone = false;
+
+    function resizeCanvas() {
+      const rect = scratchCard.getBoundingClientRect();
+      const dpr = Math.max(window.devicePixelRatio || 1, 1);
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      canvas.style.width = rect.width + 'px';
+      canvas.style.height = rect.height + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.globalCompositeOperation = 'source-over';
+      const grad = ctx.createLinearGradient(0, 0, rect.width, rect.height);
+      grad.addColorStop(0, '#d7ba77');
+      grad.addColorStop(0.55, '#b48831');
+      grad.addColorStop(1, '#f2dc9f');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, rect.width, rect.height);
+      ctx.fillStyle = 'rgba(255,255,255,0.12)';
+      for (let i = 0; i < 14; i++) {
+        ctx.beginPath();
+        ctx.arc(Math.random()*rect.width, Math.random()*rect.height, 10 + Math.random()*28, 0, Math.PI*2);
+        ctx.fill();
+      }
+      ctx.globalCompositeOperation = 'destination-out';
+    }
+
+    function pointFromEvent(e) {
+      const rect = canvas.getBoundingClientRect();
+      const touch = e.touches ? e.touches[0] : e;
+      return { x: touch.clientX - rect.left, y: touch.clientY - rect.top };
+    }
+
+    function scratchAt(x, y) {
+      ctx.beginPath();
+      ctx.arc(x, y, 34, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function checkScratchProgress() {
+      const sampleCanvas = document.createElement('canvas');
+      sampleCanvas.width = 40;
+      sampleCanvas.height = 24;
+      const sctx = sampleCanvas.getContext('2d');
+      sctx.drawImage(canvas, 0, 0, sampleCanvas.width, sampleCanvas.height);
+      const data = sctx.getImageData(0, 0, sampleCanvas.width, sampleCanvas.height).data;
+      let transparent = 0;
+      for (let i = 3; i < data.length; i += 4) {
+        if (data[i] < 70) transparent++;
+      }
+      const ratio = transparent / (sampleCanvas.width * sampleCanvas.height);
+      if (ratio > 0.24) revealScratch();
+    }
+
+    function burstConfetti() {
+      const colors = ['#d7ba77','#b48831','#f8d7e4','#ffd76f','#8caf7c','#ffffff'];
+      const total = 90;
+      for (let i = 0; i < total; i++) {
+        const piece = document.createElement('span');
+        piece.className = 'confetti-piece';
+        piece.style.background = colors[Math.floor(Math.random()*colors.length)];
+        piece.style.left = '50%';
+        piece.style.top = '34%';
+        piece.style.borderRadius = Math.random() > 0.5 ? '2px' : '50%';
+        piece.style.setProperty('--x', (Math.random() * 360 - 180) + 'px');
+        piece.style.setProperty('--y', (Math.random() * 280 - 40) + 'px');
+        piece.style.setProperty('--r', (Math.random() * 900 - 450) + 'deg');
+        piece.style.width = (6 + Math.random() * 8) + 'px';
+        piece.style.height = (10 + Math.random() * 10) + 'px';
+        confetti.appendChild(piece);
+        setTimeout(() => piece.remove(), 1900);
+      }
+    }
+
+    function startCountdown() {
+      if (countdownStarted) return;
+      countdownStarted = true;
+      countdownWrap.classList.add('revealed');
+      const target = new Date('2026-08-31T00:00:00');
+      function updateCountdown() {
+        const now = new Date();
+        let diff = target - now;
+        if (diff < 0) diff = 0;
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        countdownEl.innerHTML = `
+          <div class="time-box"><span class="num">${days}</span><span class="label">Days</span></div>
+          <div class="time-box"><span class="num">${hours}</span><span class="label">Hours</span></div>
+          <div class="time-box"><span class="num">${minutes}</span><span class="label">Minutes</span></div>
+          <div class="time-box"><span class="num">${seconds}</span><span class="label">Seconds</span></div>
+        `;
+      }
+      updateCountdown();
+      countdownInterval = setInterval(updateCountdown, 1000);
+    }
+
+    function revealScratch() {
+      if (scratchDone) return;
+      scratchDone = true;
+      overlay.style.transition = 'opacity .55s ease';
+      overlay.style.opacity = '0';
+      setTimeout(() => { overlay.style.display = 'none'; }, 580);
+      burstConfetti();
+      startCountdown();
+    }
+
+    let lastPoint = null;
+
+    function scratchLine(from, to) {
+      const dx = to.x - from.x;
+      const dy = to.y - from.y;
+      const distance = Math.hypot(dx, dy);
+      const steps = Math.max(1, Math.ceil(distance / 10));
+      for (let i = 0; i <= steps; i++) {
+        const t = i / steps;
+        scratchAt(from.x + dx * t, from.y + dy * t);
+      }
+    }
+
+    function onStart(e) {
+      if (scratchDone) return;
+      drawing = true;
+      const p = pointFromEvent(e);
+      lastPoint = p;
+      scratchAt(p.x, p.y);
+      checkScratchProgress();
+      e.preventDefault();
+    }
+    function onMove(e) {
+      if (!drawing || scratchDone) return;
+      const p = pointFromEvent(e);
+      if (lastPoint) scratchLine(lastPoint, p);
+      else scratchAt(p.x, p.y);
+      lastPoint = p;
+      checkScratchProgress();
+      e.preventDefault();
+    }
+    function onEnd() { drawing = false; lastPoint = null; }
+
+    canvas.addEventListener('mousedown', onStart);
+    canvas.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onEnd);
+    canvas.addEventListener('touchstart', onStart, { passive: false });
+    canvas.addEventListener('touchmove', onMove, { passive: false });
+    window.addEventListener('touchend', onEnd);
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+
+    const coupleCanvas = document.getElementById('coupleCanvas');
+    const coupleCtx = coupleCanvas ? coupleCanvas.getContext('2d') : null;
+    const coupleImages = ['https://raw.githubusercontent.com/maryam-FOLDS/Bharath-Madhuri/main/image4bm.jpg', 'https://raw.githubusercontent.com/maryam-FOLDS/Bharath-Madhuri/main/image5bm.jpg', 'https://raw.githubusercontent.com/maryam-FOLDS/Bharath-Madhuri/main/image6bm.jpg'];
+    const loadedCoupleImages = [];
+    let coupleStartTime = 0;
+    const coupleFrameDuration = 3200;
+    const coupleFadeDuration = 900;
+
+    function fitCover(image, canvasWidth, canvasHeight) {
+      const imageRatio = image.width / image.height;
+      const canvasRatio = canvasWidth / canvasHeight;
+      let drawWidth, drawHeight, offsetX, offsetY;
+      if (imageRatio > canvasRatio) {
+        drawHeight = canvasHeight;
+        drawWidth = drawHeight * imageRatio;
+        offsetX = (canvasWidth - drawWidth) / 2;
+        offsetY = 0;
+      } else {
+        drawWidth = canvasWidth;
+        drawHeight = drawWidth / imageRatio;
+        offsetX = 0;
+        offsetY = (canvasHeight - drawHeight) / 2;
+      }
+      return { drawWidth, drawHeight, offsetX, offsetY };
+    }
+
+    function drawCoupleImage(image, alpha) {
+      if (!coupleCtx || !image) return;
+      const { drawWidth, drawHeight, offsetX, offsetY } = fitCover(image, coupleCanvas.width, coupleCanvas.height);
+      coupleCtx.save();
+      coupleCtx.globalAlpha = alpha;
+      coupleCtx.drawImage(image, offsetX, offsetY, drawWidth, drawHeight);
+      coupleCtx.restore();
+    }
+
+    function animateCoupleCanvas(timestamp) {
+      if (!coupleCtx || loadedCoupleImages.length === 0) return;
+      if (!coupleStartTime) coupleStartTime = timestamp;
+      const elapsed = timestamp - coupleStartTime;
+      const totalDuration = loadedCoupleImages.length * coupleFrameDuration;
+      const cycleTime = elapsed % totalDuration;
+      const currentIndex = Math.floor(cycleTime / coupleFrameDuration);
+      const nextIndex = (currentIndex + 1) % loadedCoupleImages.length;
+      const frameTime = cycleTime % coupleFrameDuration;
+      let nextAlpha = 0;
+      if (frameTime > coupleFrameDuration - coupleFadeDuration) {
+        nextAlpha = (frameTime - (coupleFrameDuration - coupleFadeDuration)) / coupleFadeDuration;
+      }
+      coupleCtx.clearRect(0, 0, coupleCanvas.width, coupleCanvas.height);
+      drawCoupleImage(loadedCoupleImages[currentIndex], 1);
+      if (nextAlpha > 0) drawCoupleImage(loadedCoupleImages[nextIndex], nextAlpha);
+      requestAnimationFrame(animateCoupleCanvas);
+    }
+
+    if (coupleCanvas) {
+      Promise.all(coupleImages.map(src => new Promise((resolve) => {
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.onload = () => resolve(img);
+        img.onerror = () => resolve(null);
+        img.src = src;
+      }))).then((images) => {
+        images.filter(Boolean).forEach(img => loadedCoupleImages.push(img));
+        if (loadedCoupleImages.length) requestAnimationFrame(animateCoupleCanvas);
+      });
+    }
+
+    const reveals = document.querySelectorAll('.reveal-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
