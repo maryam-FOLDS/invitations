@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#101713" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="320" />
+  <title>Vinusha &amp; Darshan | Wedding Invitation</title>
+  <meta name="description" content="Vinusha & Darshan Wedding Invitation — Tap to open invitation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Vinusha &amp; Darshan" />
+  <meta property="og:description" content="Wedding Invitation&#10;Tap to open invitation" />
+  <meta property="og:image" content="https://res.cloudinary.com/dx3f65i2v/image/upload/v1782840483/file_000000007bc072078c3880eb06220b98_sqruop.png" />
+  <meta property="og:image:secure_url" content="https://res.cloudinary.com/dx3f65i2v/image/upload/v1782840483/file_000000007bc072078c3880eb06220b98_sqruop.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Vinusha and Darshan wedding invitation" />
+  <meta property="og:site_name" content="Wedding Invitation" />
+  <link rel="preload" as="video" href="https://github.com/maryam-FOLDS/Vinusha-Dinesh/raw/refs/heads/main/Vv1.mp4" type="video/mp4" />
+  <link rel="preload" as="audio" href="https://github.com/maryam-FOLDS/Vinusha-Dinesh/raw/refs/heads/main/vin.mp3" type="audio/mpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vinusha &amp; Darshan" />
+  <meta name="twitter:description" content="Wedding Invitation — Tap to open invitation" />
+  <meta name="twitter:image" content="https://res.cloudinary.com/dx3f65i2v/image/upload/v1782840483/file_000000007bc072078c3880eb06220b98_sqruop.png" />
+  <link rel="image_src" href="https://res.cloudinary.com/dx3f65i2v/image/upload/v1782840483/file_000000007bc072078c3880eb06220b98_sqruop.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --sage-900: #44584a;
+      --sage-800: #53695a;
+      --sage-700: #69806f;
+      --sage-600: #7e9485;
+      --sage-500: #9ab09f;
+      --sage-400: #bfd0c1;
+      --sage-300: #d7e4d6;
+      --sage-200: #edf5ec;
+      --blush-700: #9f5f77;
+      --blush-600: #b07188;
+      --blush-500: #cf94aa;
+      --rose-border: #915269;
+      --rose-soft: rgba(207, 148, 170, 0.3);
+      --card: rgba(255, 255, 255, 0.58);
+      --card-strong: rgba(255, 255, 255, 0.72);
+      --text: #2f4235;
+      --muted: #5c6f63;
+      --line: rgba(145, 82, 105, 0.26);
+      --shadow: 0 24px 60px rgba(58, 84, 66, 0.16);
+      --radius: 30px;
+      --countdown-target: '2026-08-07T00:00:00+05:30';
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+    }
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    img { -webkit-user-drag: none; user-drag: none; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      color: var(--text);
+      font-family: 'Cormorant Garamond', serif;
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,0.8) 0, transparent 28%),
+        radial-gradient(circle at 12% 16%, rgba(211, 165, 185, 0.18) 0, transparent 22%),
+        radial-gradient(circle at 88% 10%, rgba(182, 205, 184, 0.4) 0, transparent 25%),
+        linear-gradient(180deg, #dbe8dc 0%, #cddccf 42%, #e9dce1 100%);
+      position: relative;
+    }
+
+    body.content-open {
+      overflow-y: auto;
+    }
+
+    body::before,
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    body::before {
+      background:
+        radial-gradient(circle at 15% 22%, rgba(255,255,255,0.45) 0 1px, transparent 2px),
+        radial-gradient(circle at 75% 18%, rgba(255,255,255,0.38) 0 1px, transparent 2px),
+        radial-gradient(circle at 26% 72%, rgba(255,255,255,0.28) 0 1px, transparent 2px);
+      opacity: 0.75;
+    }
+
+    body::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'%3E%3Cg fill='none' stroke='rgba(145,82,105,0.12)' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M40 112c18-31 43-48 70-45-19 8-32 24-39 43-6 19-6 35-2 49-17-11-37-18-58-13 8-15 15-24 29-34z'/%3E%3Cpath d='M235 82c32 5 57 31 59 60-15-9-36-10-54-2-17 8-31 22-38 35-7-27 4-63 33-93z'/%3E%3Cpath d='M128 190c19 0 38 12 44 29-17-5-36-2-50 6-14 7-23 19-28 30-10-18-9-41 4-53 7-7 17-12 30-12z'/%3E%3Cpath d='M194 197c19-10 44-8 61 8-16 0-31 6-44 16-10 8-17 17-21 28-6-19-5-37 4-52z'/%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.45;
+      z-index: -3;
+    }
+
+    .glow {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(70px);
+      pointer-events: none;
+      z-index: -1;
+      opacity: 0.44;
+      animation: drift 18s ease-in-out infinite alternate;
+    }
+    .glow.one { width: 260px; height: 260px; left: -6vw; top: 10vh; background: rgba(255, 255, 255, 0.6); }
+    .glow.two { width: 300px; height: 300px; right: -9vw; top: 42vh; background: rgba(205, 157, 177, 0.34); animation-duration: 22s; }
+    .glow.three { width: 240px; height: 240px; left: 18vw; bottom: -8vh; background: rgba(171, 199, 173, 0.46); animation-duration: 26s; }
+
+    @keyframes drift {
+      from { transform: translate3d(0, 0, 0) scale(1); }
+      to { transform: translate3d(28px, -20px, 0) scale(1.08); }
+    }
+
+    .intro {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100vh;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      cursor: pointer;
+      isolation: isolate;
+      background: rgb(195, 209, 183);
+      z-index: 30;
+      transition: opacity 0.9s ease, visibility 0.9s ease;
+      padding: max(26px, env(safe-area-inset-top)) 20px max(26px, env(safe-area-inset-bottom));
+    }
+
+    .intro.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .intro,
+    .intro * {
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      user-select: none;
+      -webkit-user-select: none;
+      outline: none;
+    }
+
+    .intro-copy {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: min(100%, 560px);
+      gap: clamp(16px, 3vh, 26px);
+      color: #2f4235;
+    }
+
+    .intro-invite {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(2.8rem, 9vw, 4.8rem);
+      line-height: 1;
+      color: #304135;
+      margin: 0;
+      text-shadow: 0 10px 20px rgba(255, 255, 255, 0.22);
+    }
+
+    .intro-center {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .intro-image {
+      width: min(82vw, 340px);
+      max-width: 100%;
+      display: block;
+      animation: introFloat 3.8s ease-in-out infinite;
+      filter: drop-shadow(0 18px 24px rgba(68, 88, 74, 0.16));
+    }
+
+    .intro-prompt {
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-size: 0.84rem;
+      color: #3f5444;
+      margin: 0;
+    }
+
+    @keyframes introFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+    }
+
+    .content {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 1s ease, transform 1s ease;
+      padding: 42px 14px 56px;
+      pointer-events: none;
+      text-align: center;
+    }
+
+    .hero-section {
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      backdrop-filter: none;
+      overflow: visible;
+    }
+
+    .hero-section::before {
+      display: none;
+    }
+
+    .hero-section .canvas-inner {
+      padding: 0;
+    }
+
+    .hero-section .hero-image {
+      border-radius: 28px;
+      box-shadow: 0 20px 44px rgba(76, 104, 84, 0.14);
+    }
+
+    .content.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .stack {
+      width: min(100%, 760px);
+      margin: 0 auto;
+      display: grid;
+      gap: 22px;
+    }
+
+    .canvas-card {
+      position: relative;
+      background: linear-gradient(180deg, rgba(255,255,255,0.68), rgba(255,255,255,0.52));
+      border-radius: var(--radius);
+      border: 1.5px solid var(--line);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+      overflow: hidden;
+      transform: translateY(24px);
+      opacity: 0;
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+
+    .canvas-card.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .canvas-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      padding: 1.5px;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(145,82,105,0.7), rgba(227,182,200,0.72), rgba(145,82,105,0.7));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .canvas-inner {
+      position: relative;
+      padding: clamp(24px, 5vw, 42px);
+      z-index: 1;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .eyebrow::before,
+    .eyebrow::after {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(145, 82, 105, 0.75), transparent);
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    .hero-title {
+      font-size: clamp(3.2rem, 10vw, 5.8rem);
+      line-height: 0.9;
+      color: var(--sage-900);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(1.9rem, 5vw, 3rem);
+      line-height: 1.05;
+      text-align: center;
+      color: var(--blush-700);
+      margin-bottom: 22px;
+    }
+
+    .lead-copy,
+    .verse-text,
+    .venue-copy,
+    .footer-copy {
+      text-align: center;
+      color: var(--muted);
+      font-size: clamp(1.1rem, 2.7vw, 1.35rem);
+      line-height: 1.5;
+    }
+
+    .hero-image,
+    .detail-image {
+      width: 100%;
+      display: block;
+      border-radius: 24px;
+      border: 1px solid rgba(145, 82, 105, 0.18);
+      box-shadow: 0 18px 40px rgba(76, 104, 84, 0.12);
+      object-fit: cover;
+      background: rgba(255,255,255,0.55);
+    }
+
+    .detail-image {
+      margin-top: 24px;
+    }
+
+    .verse-title {
+      font-size: clamp(1.75rem, 5.2vw, 2.7rem);
+      line-height: 1.08;
+      text-align: center;
+      color: var(--sage-900);
+      margin-bottom: 12px;
+    }
+
+    .verse-title-smaller {
+      font-size: clamp(1.58rem, 4.8vw, 2.45rem);
+    }
+
+    .verse-text {
+      max-width: 560px;
+      margin: 0 auto 12px;
+    }
+
+    .date-reveal {
+      margin-top: 28px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .date-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .date-label {
+      font-family: 'Inter', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .date-box {
+      min-height: 88px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(242, 247, 242, 0.65));
+      border: 1px solid rgba(145, 82, 105, 0.25);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 12px 28px rgba(69, 90, 74, 0.08);
+      display: grid;
+      place-items: center;
+      font-size: clamp(2.2rem, 8vw, 3rem);
+      color: var(--sage-900);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .date-box::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.55), transparent 22%, transparent 78%, rgba(192, 210, 194, 0.14));
+      pointer-events: none;
+    }
+
+    .countdown-panel {
+      margin-top: 2px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(237, 245, 237, 0.78));
+      border: 1px solid rgba(145, 82, 105, 0.18);
+      border-radius: 24px;
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: max-height 0.7s ease, opacity 0.6s ease, transform 0.6s ease, padding 0.6s ease;
+    }
+
+    .countdown-panel.show {
+      padding: 20px 18px 18px;
+      max-height: 240px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .countdown-title {
+      text-align: center;
+      color: var(--blush-700);
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(1.7rem, 5vw, 2.5rem);
+      margin-bottom: 12px;
+    }
+
+    .countdown-grid {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .count-item {
+      flex: 1 1 0;
+      min-width: 0;
+      padding: 14px 10px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(145, 82, 105, 0.16);
+      text-align: center;
+    }
+
+    .count-item strong {
+      display: block;
+      font-size: clamp(1.5rem, 5vw, 2.1rem);
+      line-height: 1;
+      color: var(--sage-900);
+      margin-bottom: 6px;
+    }
+
+    .count-item span {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .venue-block {
+      margin-top: 28px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .venue-heading {
+      text-align: center;
+      font-size: clamp(2.15rem, 6.6vw, 3.3rem);
+      color: var(--sage-900);
+      margin-bottom: 4px;
+    }
+
+    .meet-title {
+      text-align: center;
+      font-size: clamp(1.55rem, 4.8vw, 2.35rem);
+      color: var(--sage-900);
+      margin-bottom: 4px;
+    }
+
+    .venue-name {
+      text-align: center;
+      font-size: clamp(1.9rem, 5.8vw, 2.7rem);
+      color: var(--blush-700);
+      margin-top: 6px;
+    }
+
+    .venue-location {
+      text-align: center;
+      font-size: clamp(1.4rem, 4.2vw, 1.9rem);
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .map-wrap {
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid rgba(145, 82, 105, 0.18);
+      min-height: 320px;
+      box-shadow: 0 18px 42px rgba(76, 104, 84, 0.12);
+      background: rgba(255,255,255,0.5);
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      border: 0;
+      display: block;
+    }
+
+    .direction-btn {
+      justify-self: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 28px;
+      min-width: 210px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--blush-700), var(--blush-500));
+      border: 0;
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      box-shadow: 0 16px 34px rgba(159, 95, 119, 0.28);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .direction-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 38px rgba(159, 95, 119, 0.34);
+    }
+
+    .couple-slider {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      min-height: clamp(260px, 52vw, 420px);
+      background: linear-gradient(135deg, rgba(255,255,255,0.62), rgba(255,255,255,0.3));
+      border: 1px solid rgba(145, 82, 105, 0.18);
+      box-shadow: 0 18px 42px rgba(76, 104, 84, 0.1);
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1.15s ease, transform 1.15s ease;
+      transform: scale(1.04);
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slide-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 14px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.68);
+      backdrop-filter: blur(10px);
+      color: var(--sage-900);
+      text-align: center;
+      font-size: clamp(1.2rem, 3vw, 1.5rem);
+      border: 1px solid rgba(145, 82, 105, 0.16);
+    }
+
+    footer {
+      width: min(100%, 760px);
+      margin: 12px auto 0;
+      padding: 0 14px 12px;
+      display: none;
+      text-align: center;
+    }
+
+    body.content-open footer {
+      display: block;
+    }
+
+    .footer-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.58), rgba(255,255,255,0.48));
+      border-radius: 26px;
+      border: 1px solid rgba(145, 82, 105, 0.22);
+      padding: 24px 22px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 16px 36px rgba(76, 104, 84, 0.1);
+    }
+
+    .footer-names {
+      font-size: clamp(2rem, 6vw, 3rem);
+      color: var(--sage-900);
+      margin-bottom: 8px;
+    }
+
+    .footer-copy {
+      font-size: clamp(1rem, 2.8vw, 1.25rem);
+    }
+
+    .footer-credit {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      line-height: 1.5;
+    }
+
+    .footer-copy a {
+      color: var(--blush-700);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (min-width: 700px) {
+      .date-reveal {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: start;
+      }
+      .countdown-panel {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 699px) {
+      .countdown-panel {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      .countdown-panel.show {
+        padding: 20px 12px 18px;
+      }
+      .countdown-grid {
+        gap: 8px;
+      }
+      .count-item {
+        padding: 12px 6px;
+      }
+      .count-item strong {
+        font-size: clamp(1.15rem, 4.5vw, 1.45rem);
+      }
+      .count-item span {
+        font-size: 0.62rem;
+        letter-spacing: 0.12em;
+      }
+      .canvas-inner { padding: 24px 20px; }
+      .hero-title { font-size: clamp(2.8rem, 13vw, 4rem); }
+      .verse-title { font-size: clamp(1.65rem, 8vw, 2.35rem); }
+      .verse-title-smaller { font-size: clamp(1.45rem, 7vw, 2.1rem); }
+      .venue-heading { font-size: clamp(1.95rem, 7.2vw, 2.7rem); }
+      .meet-title { font-size: clamp(1.45rem, 6vw, 2rem); }
+      .venue-name { font-size: clamp(1.7rem, 6.5vw, 2.3rem); }
+      .venue-location { font-size: clamp(1.28rem, 4.8vw, 1.65rem); }
+      .map-wrap, .map-wrap iframe { min-height: 280px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="glow one"></div>
+  <div class="glow two"></div>
+  <div class="glow three"></div>
+
+  <audio id="bgMusic" preload="auto" loop playsinline>
+    <source src="https://github.com/maryam-FOLDS/Vinusha-Dinesh/raw/refs/heads/main/vin.mp3" type="audio/mpeg" />
+  </audio>
+
+  <section class="intro" id="introScreen" aria-label="Wedding invitation opening screen">
+    <div class="intro-copy">
+      <div class="intro-invite">you are Invited</div>
+      <div class="intro-center">
+        <img class="intro-image" src="https://raw.githubusercontent.com/maryam-FOLDS/Vinusha-Dinesh/refs/heads/main/image.vd.png" alt="Wedding invitation cover image" />
+      </div>
+      <div class="intro-prompt">tap to open</div>
+    </div>
+  </section>
+
+  <main class="content" id="invitationContent">
+    <div class="stack">
+      <section class="canvas-card reveal-card hero-section">
+        <div class="canvas-inner">
+          <div class="eyebrow">Wedding Invitation</div>
+          <div class="hero-subtitle">A celebration of covenant and love</div>
+          <img class="hero-image" src="https://raw.githubusercontent.com/maryam-FOLDS/Vinusha-Dinesh/refs/heads/main/imagevd.png" alt="Wedding invitation design image" />
+        </div>
+      </section>
+
+      <section class="canvas-card reveal-card">
+        <div class="canvas-inner">
+          <h2 class="verse-title verse-title-smaller">“Marriage is honorable in all.” Hebrews 13:4</h2>
+          <p class="verse-text">This is the date we’ve been prayfully waiting for.</p>
+
+          <div class="date-reveal" id="dateReveal">
+            <div class="date-row">
+              <div class="date-label">Date</div>
+              <div class="date-box" data-final="07">00</div>
+            </div>
+            <div class="date-row">
+              <div class="date-label">Month</div>
+              <div class="date-box" data-final="08">00</div>
+            </div>
+            <div class="date-row">
+              <div class="date-label">Year</div>
+              <div class="date-box" data-final="2026">0000</div>
+            </div>
+
+            <div class="countdown-panel" id="countdownPanel">
+              <div class="countdown-title">Countdown to our day</div>
+              <div class="countdown-grid">
+                <div class="count-item"><strong id="days">00</strong><span>Days</span></div>
+                <div class="count-item"><strong id="hours">00</strong><span>Hours</span></div>
+                <div class="count-item"><strong id="minutes">00</strong><span>Minutes</span></div>
+                <div class="count-item"><strong id="seconds">00</strong><span>Seconds</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="canvas-card reveal-card">
+        <div class="canvas-inner">
+          <div class="eyebrow">Celebration Details</div>
+          <h2 class="verse-title verse-title-smaller">“"Submit to one another out of reverence for christ." Ephesians 5:21</h2>
+          <img class="detail-image" src="https://raw.githubusercontent.com/maryam-FOLDS/Vinusha-Dinesh/refs/heads/main/image2vii.png" alt="Wedding celebration design image" />
+
+          <div class="venue-block">
+            <h3 class="venue-heading">Where we will Celebrate</h3>
+            <div>
+              <div class="venue-name">Venue</div>
+              <div class="venue-location">St John’s Lutheran Church<br />Kakinda</div>
+            </div>
+
+            <div class="map-wrap">
+              <iframe
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=St.%20John%27s%20Lutheran%20Church%2C%20Subbayya%20Gari%20Hotel%20Area%2C%2010-3-1%2C%20Rama%20Rao%20Peta%2C%20Kakinada%2C%20Andhra%20Pradesh%20533004%2C%20India&output=embed">
+              </iframe>
+            </div>
+
+            <a
+              class="direction-btn"
+              href="https://www.google.com/maps/dir/?api=1&destination_place_id=ChIJt0GjRQApODoRxj2GgIZEio0&destination=St.%20John%27s%20Lutheran%20Church%2C%20Kakinada"
+              target="_blank"
+              rel="noopener noreferrer"
+            >View direction</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="canvas-card reveal-card">
+        <div class="canvas-inner">
+          <div class="eyebrow">Together in love</div>
+          <h3 class="meet-title">"I have found the one whom my soul loves." Song of Solomon 3:4</h3>
+          <div class="couple-slider" id="coupleSlider">
+            <div class="slide active">
+              <img src="https://raw.githubusercontent.com/maryam-FOLDS/Vinusha-Dinesh/refs/heads/main/image4vi.jpg" alt="Bride and groom portrait 1" />
+            </div>
+            <div class="slide">
+              <img src="https://raw.githubusercontent.com/maryam-FOLDS/Vinusha-Dinesh/refs/heads/main/image3.jpg" alt="Bride and groom portrait 2" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-card">
+      <div class="footer-copy">With love</div>
+      <div class="footer-names">Vinusha❤️Dharshan</div>
+      <div class="footer-credit">Made with ❤ by<br />@themaryam.in | +91 7359033087</div>
+    </div>
+  </footer>
+
+  <script>
+    const introScreen = document.getElementById('introScreen');
+    const bgMusic = document.getElementById('bgMusic');
+    const invitationContent = document.getElementById('invitationContent');
+    const revealCards = document.querySelectorAll('.reveal-card');
+    const countdownPanel = document.getElementById('countdownPanel');
+    const dateBoxes = document.querySelectorAll('.date-box');
+    const countdownTarget = new Date('2026-08-07T00:00:00+05:30');
+    let introStarted = false;
+    let invitationShown = false;
+    let dateAnimationStarted = false;
+
+    const pad = value => String(value).padStart(2, '0');
+
+    function waitForMediaReady(media) {
+      if (!media) return Promise.resolve();
+      if (media.readyState >= 3) return Promise.resolve();
+      return new Promise(resolve => {
+        let settled = false;
+        const done = () => {
+          if (settled) return;
+          settled = true;
+          media.removeEventListener('canplay', done);
+          media.removeEventListener('loadeddata', done);
+          resolve();
+        };
+        media.addEventListener('canplay', done, { once: true });
+        media.addEventListener('loadeddata', done, { once: true });
+        window.setTimeout(done, 7000);
+        try {
+          media.load();
+        } catch (e) {
+          done();
+        }
+      });
+    }
+
+    async function startMusic() {
+      if (!bgMusic) return;
+      try {
+        bgMusic.pause();
+      } catch (e) {}
+      bgMusic.muted = false;
+      bgMusic.volume = 1;
+      await waitForMediaReady(bgMusic);
+      try {
+        bgMusic.currentTime = 119;
+      } catch (e) {}
+      try {
+        await bgMusic.play();
+      } catch (e) {}
+    }
+
+    async function startIntro() {
+      if (introStarted) return;
+      introStarted = true;
+      introScreen.classList.add('started');
+
+      startMusic();
+      showInvitation();
+    }
+
+    function showInvitation() {
+      if (invitationShown) return;
+      invitationShown = true;
+      document.body.classList.add('content-open');
+      invitationContent.classList.add('show');
+      introScreen.classList.add('hidden');
+      window.setTimeout(() => {
+        introScreen.style.display = 'none';
+        window.scrollTo({ top: 0, behavior: 'auto' });
+      }, 920);
+    }
+
+    ['pointerup', 'click', 'touchend'].forEach(eventName => {
+      introScreen.addEventListener(eventName, startIntro, { passive: true });
+    });
+    function stopMusic() {
+      if (!bgMusic) return;
+      try {
+        bgMusic.pause();
+      } catch (e) {}
+    }
+
+    window.addEventListener('pagehide', stopMusic);
+    window.addEventListener('beforeunload', stopMusic);
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        stopMusic();
+      }
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          if (!dateAnimationStarted && entry.target.querySelector('#dateReveal')) {
+            dateAnimationStarted = true;
+            setTimeout(runDateReveal, 450);
+          }
+        }
+      });
+    }, { threshold: 0.16 });
+
+    revealCards.forEach(card => observer.observe(card));
+
+    function rollBox(box, finalValue, duration, digits) {
+      const start = performance.now();
+      const max = digits === 4 ? 9999 : 99;
+      const finalString = String(finalValue).padStart(digits, '0');
+
+      function frame(now) {
+        const elapsed = now - start;
+        if (elapsed < duration) {
+          const randomValue = Math.floor(Math.random() * (max + 1));
+          box.textContent = String(randomValue).padStart(digits, '0');
+          requestAnimationFrame(frame);
+        } else {
+          box.textContent = finalString;
+        }
+      }
+      requestAnimationFrame(frame);
+    }
+
+    function runDateReveal() {
+      const configs = [
+        { box: dateBoxes[0], final: '07', duration: 2400, digits: 2 },
+        { box: dateBoxes[1], final: '08', duration: 3000, digits: 2 },
+        { box: dateBoxes[2], final: '2026', duration: 3600, digits: 4 }
+      ];
+
+      configs.forEach(({ box, final, duration, digits }, index) => {
+        setTimeout(() => rollBox(box, final, duration, digits), index * 220);
+      });
+
+      setTimeout(() => {
+        countdownPanel.classList.add('show');
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+      }, 4100);
+    }
+
+    function updateCountdown() {
+      const now = new Date();
+      let diff = countdownTarget - now;
+      if (diff < 0) diff = 0;
+
+      const totalSeconds = Math.floor(diff / 1000);
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      document.getElementById('days').textContent = pad(days);
+      document.getElementById('hours').textContent = pad(hours);
+      document.getElementById('minutes').textContent = pad(minutes);
+      document.getElementById('seconds').textContent = pad(seconds);
+    }
+
+    const slides = document.querySelectorAll('.slide');
+    let slideIndex = 0;
+    setInterval(() => {
+      slides[slideIndex].classList.remove('active');
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add('active');
+    }, 3400);
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
