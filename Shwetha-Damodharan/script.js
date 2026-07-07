@@ -455,11 +455,16 @@
           if (savedVideoTime > 0 && savedVideoTime < Math.max(0, (video.duration || Infinity) - 0.25)) {
             try { video.currentTime = savedVideoTime; } catch (e) {}
           }
-          const audioPlay = playAudioFromRequestedTime(false, [300, 1000, 2200]);
-          const videoPlay = video.play();
-          await Promise.allSettled([audioPlay, videoPlay]);
-          if (video.paused && !endedState) throw new Error('Video failed to play');
-        } catch (err) {
+       const audioPlay = playAudioFromRequestedTime(false,[300,1000,2200]);
+
+try{
+    await video.play();
+}catch(e){
+    console.error("Video play failed",e);
+}
+
+await audioPlay.catch(()=>{})
+        } catch (err) {  
           hasPlayed = false;
           tapLayer.style.display = 'block';
           stopMedia();
