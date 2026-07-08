@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Harshitha ❤️ Vignesh</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://invites.themaryam.in/Harshitha-Vignesh" />
+  <meta property="og:title" content="Wedding Invitation. Harshitha &amp; Vignesh" />
+  <meta property="og:description" content="Wedding Invitation. Harshitha &amp; Vignesh" />
+  <meta property="og:image" content="https://res.cloudinary.com/dx3f65i2v/image/upload/c_limit,w_1200,f_jpg,q_auto/v1783398980/file_000000004fd4720783290c473139eb2c_z7q1vs.png" />
+  <meta property="og:image:secure_url" content="https://res.cloudinary.com/dx3f65i2v/image/upload/c_limit,w_1200,f_jpg,q_auto/v1783398980/file_000000004fd4720783290c473139eb2c_z7q1vs.png" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1672" />
+  <meta property="og:image:height" content="941" />
+  <meta property="og:site_name" content="Wedding Invitation" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Allura&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --maroon: #5c1627;
+      --maroon-soft: rgba(92,22,39,.18);
+      --muted: #7c4838;
+      --gold: #d4af37;
+      --gold-soft: #c29c5c;
+      --champagne: #f5dca0;
+      --ivory: #fff4dc;
+      --ivory-2: #f8f3e8;
+      --ivory-3: #f4e7d0;
+      --paper: #f7efdf;
+      --paper-2: #fbf7ef;
+      --terracotta: #a96b4b;
+      --bg-shadow: 0 18px 45px rgba(0,0,0,.10);
+      --soft-shadow: 0 10px 28px rgba(67, 32, 18, .12);
+      --bg-image: url('https://raw.githubusercontent.com/maryam-FOLDS/Harshitha-Vignesh/refs/heads/main/ki2.png');
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--maroon);
+      font-family: 'Cormorant Garamond', serif;
+      overflow-x: hidden;
+      background: #f3eadb;
+    }
+    body.locked { overflow: hidden; height: 100vh; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+
+    .site {
+      position: relative;
+      min-height: 100vh;
+      background-image: var(--bg-image);
+      background-repeat: repeat-y;
+      background-size: 100% auto;
+      background-position: center top;
+    }
+
+    .opening-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      overflow: hidden;
+      background: transparent;
+      touch-action: none;
+    }
+    .opening-half {
+      position: absolute;
+      top: 0;
+      width: 50.1%;
+      height: 100%;
+      background-image: url('https://raw.githubusercontent.com/maryam-FOLDS/Harshitha-Vignesh/refs/heads/main/ki0.png');
+      background-repeat: no-repeat;
+      background-size: 200% 100%;
+      will-change: transform;
+      transition: transform 780ms cubic-bezier(.22,1,.36,1), filter 780ms cubic-bezier(.22,1,.36,1), opacity 420ms ease;
+    }
+    .opening-half.left { left: 0; background-position: left center; }
+    .opening-half.right { right: 0; background-position: right center; }
+    .opening-screen.open .left { transform: translateX(-103%); }
+    .opening-screen.open .right { transform: translateX(103%); }
+    .opening-screen.done { opacity: 0; pointer-events: none; transition: opacity .28s linear; }
+    .opening-screen.dragging .opening-half { transition: none; }
+
+    .hero-page {
+      position: relative;
+      min-height: 100svh;
+      background-image: url('https://raw.githubusercontent.com/maryam-FOLDS/Harshitha-Vignesh/refs/heads/main/bgh.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center top;
+      overflow: hidden;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+      padding: 0 8%;
+    }
+    .hero-copy {
+      position: absolute;
+      top: 24%;
+      width: min(86%, 560px);
+      text-align: center;
+      color: #5C1627;
+      line-height: 1.05;
+      opacity: 1;
+    }
+    .ganesha {
+      width: clamp(28px, 4.8vw, 40px);
+      margin: 0 auto 20px;
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    .ganesha svg { width: 100%; height: auto; fill: none; stroke: #5C1627; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; display: block; }
+    .reveal-text {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    .luxury-italics {
+      font-size: clamp(18px, 3.4vw, 34px);
+      font-style: italic;
+      color: #5C1627;
+      letter-spacing: .01em;
+    }
+    .amp {
+      font-size: clamp(18px, 3.2vw, 30px);
+      color: #5C1627;
+      margin: 3px 0;
+    }
+    .invite-main {
+      margin-top: 18px;
+      font-family: 'Cinzel', serif;
+      font-size: clamp(15px, 3.28vw, 34px);
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #5C1627;
+      letter-spacing: .23em;
+      line-height: 1.2;
+    }
+    .invite-sub {
+      margin-top: 10px;
+      font-size: clamp(18px, 3.18vw, 30px);
+      color: #5C1627;
+      font-style: italic;
+    }
+    .name-script {
+      margin-top: 24px;
+      font-family: 'Great Vibes', 'Allura', cursive;
+      font-size: clamp(46px, 9.2vw, 84px);
+      line-height: .92;
+      white-space: nowrap;
+      color: #5C1627;
+      letter-spacing: .005em;
+      text-shadow: 0 3px 14px rgba(74,17,27,.12);
+    }
+    .parent-group {
+      margin-top: 8px;
+      font-size: clamp(14px, 2.65vw, 24px);
+      color: #5C1627;
+      line-height: 1.12;
+    }
+    .with-row {
+      margin: 18px auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #5C1627;
+      font-family: 'Cinzel', serif;
+      font-size: clamp(13px, 2.9vw, 22px);
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    .divider {
+      width: 26%;
+      max-width: 116px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(92,22,39,.45), transparent);
+      position: relative;
+    }
+    .divider::before, .divider::after {
+      content: '✦';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 9px;
+      color: rgba(92,22,39,.65);
+      opacity: .8;
+    }
+    .divider::before { left: 7px; }
+    .divider::after { right: 7px; }
+
+    .hero-copy.play .ganesha,
+    .hero-copy.play .reveal-text {
+      animation: heroDrop .82s cubic-bezier(.22,1,.36,1) forwards;
+    }
+    .hero-copy.play .ganesha { animation-delay: .05s; }
+    .hero-copy.play .g1 { animation-delay: .16s; }
+    .hero-copy.play .g2 { animation-delay: .28s; }
+    .hero-copy.play .g3 { animation-delay: .42s; }
+    .hero-copy.play .g4 { animation-delay: .54s; }
+    .hero-copy.play .g5 { animation-delay: .68s; }
+    .hero-copy.play .g6 { animation-delay: .78s; }
+    .hero-copy.play .g7 { animation-delay: .90s; }
+    .hero-copy.play .g8 { animation-delay: 1.02s; }
+
+    .themed-section {
+      position: relative;
+      background: transparent;
+      padding: 70px 0 90px;
+    }
+    .section-inner {
+      width: min(100%, 760px);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .ornament, .section-title, .section-subtitle {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    .ornament {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .ornament svg {
+      width: 136px;
+      height: 26px;
+      stroke: var(--gold-soft);
+      fill: none;
+      stroke-width: 1.4;
+      opacity: .95;
+    }
+    .section-title {
+      text-align: center;
+      margin: 0;
+      font-size: clamp(34px, 7vw, 48px);
+      color: var(--maroon);
+      line-height: 1.05;
+    }
+    .section-subtitle {
+      margin: 18px auto 0;
+      text-align: center;
+      max-width: 82%;
+      font-size: clamp(20px, 4.2vw, 24px);
+      color: var(--muted);
+      line-height: 1.25;
+    }
+    .visible .ornament,
+    .visible .section-title,
+    .visible .section-subtitle {
+      animation: sectionRise .78s cubic-bezier(.22,1,.36,1) forwards;
+    }
+    .visible .section-title { animation-delay: .1s; }
+    .visible .section-subtitle { animation-delay: .2s; }
+
+    .festivities-wrap {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+    .flip-card {
+      width: min(78vw, 360px);
+      height: 408px;
+      perspective: 1400px;
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      transition: transform .28s ease;
+      will-change: transform;
+    }
+    .flip-card.ready {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+      transform: translateZ(0);
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.10);
+      transition: transform 720ms cubic-bezier(.2,.8,.2,1), box-shadow 720ms cubic-bezier(.2,.8,.2,1);
+      will-change: transform;
+    }
+    .flip-card.flipped .flip-card-inner,
+    .flip-card.flipping .flip-card-inner {
+      transform: rotateY(180deg);
+      box-shadow: 0 16px 34px rgba(0,0,0,.16);
+    }
+    .flip-card.flipped .flip-card-inner { animation: none; }
+    .card-face {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      border-radius: 24px;
+      border: 2px solid #c29c5c;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform: translateZ(0);
+      background: #eadfcf;
+    }
+    .card-back {
+      background-size: cover;
+      background-position: var(--image-position, center center);
+      filter: grayscale(1) contrast(1.06) brightness(.94);
+    }
+    .card-back::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 18% 22%, rgba(255,255,255,.16), transparent 34%), radial-gradient(circle at 80% 76%, rgba(255,255,255,.10), transparent 28%), linear-gradient(transparent, rgba(113,88,55,.14));
+      mix-blend-mode: soft-light;
+    }
+    .card-front {
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      background: #f1e8d9;
+    }
+    .card-top-image {
+      height: 66%;
+      background-size: cover;
+      background-position: var(--image-position, center center);
+      border-radius: 22px 22px 0 0;
+    }
+    .card-footer {
+      min-height: 34%;
+      background: var(--terracotta);
+      padding: 14px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      color: var(--ivory-2);
+    }
+    .event-title {
+      margin: 0 0 6px;
+      font-size: 29px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .event-time {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.14;
+      color: var(--ivory-3);
+    }
+    .event-muhurtham {
+      margin-top: 4px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .venue-link {
+      margin-top: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.15;
+      text-decoration: underline;
+      text-decoration-color: rgba(248,243,232,.85);
+      text-underline-offset: 3px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      transition: color .25s ease, text-decoration-color .25s ease;
+    }
+    .venue-link:hover, .venue-link:focus-visible { color: var(--champagne); text-decoration-color: var(--gold); }
+
+    .rsvp-shell {
+      width: min(96%, 860px);
+      margin: 42px auto 0;
+      background: rgba(247,239,223,.98);
+      border: 2px solid rgba(92,22,39,.34);
+      box-shadow: 0 0 0 1px rgba(194,156,92,.18), 0 18px 45px rgba(0,0,0,.10);
+      border-radius: 30px;
+      padding: 30px 18px 26px;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    .rsvp-shell.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .rsvp-shell::before {
+      content: '';
+      position: absolute;
+      inset: 12px;
+      border-radius: 22px;
+      border: 1px solid rgba(92,22,39,.10);
+      pointer-events: none;
+    }
+    .rsvp-form {
+      position: relative;
+      z-index: 2;
+    }
+    .form-error-banner {
+      display: none;
+      margin-bottom: 14px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(139,35,55,.08);
+      border: 1px solid rgba(139,35,55,.16);
+      color: #8b2337;
+      font-size: 17px;
+    }
+    .form-error-banner.show { display: block; }
+    .rsvp-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .field.full { grid-column: 1 / -1; }
+    .label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: clamp(20px, 4vw, 24px);
+      font-weight: 600;
+      color: var(--maroon);
+      line-height: 1.12;
+    }
+    .text-input, .number-input, .textarea-input {
+      width: 100%;
+      min-height: 52px;
+      border-radius: 14px;
+      border: 1.4px solid rgba(92,22,39,.16);
+      background: rgba(251,247,239,.98);
+      padding: 12px 16px;
+      font-size: 20px;
+      color: #4e3a30;
+      outline: none;
+      transition: border-color .22s ease, box-shadow .22s ease;
+    }
+    .textarea-input { min-height: 110px; resize: vertical; }
+
+    .number-stepper {
+      display: grid;
+      grid-template-columns: 52px 1fr 52px;
+      align-items: center;
+      gap: 10px;
+    }
+    .stepper-btn {
+      min-height: 52px;
+      border: 1.5px solid rgba(198,166,101,.48);
+      border-radius: 14px;
+      background: rgba(250,245,235,.92);
+      color: var(--maroon);
+      font-size: 28px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+    }
+    .stepper-btn:hover { transform: translateY(-1px); box-shadow: var(--soft-shadow); }
+    .stepper-btn:disabled { opacity: .45; cursor: not-allowed; transform: none; box-shadow: none; }
+    .number-input { text-align: center; appearance: textfield; -moz-appearance: textfield; }
+    .number-input::-webkit-outer-spin-button,
+    .number-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+    .text-input::placeholder, .number-input::placeholder, .textarea-input::placeholder { color: rgb(150,140,130); }
+    .text-input:focus, .number-input:focus, .textarea-input:focus {
+      border-color: var(--gold-soft);
+      box-shadow: 0 0 0 4px rgba(198,166,101,.12);
+    }
+    .error-msg {
+      min-height: 18px;
+      margin-top: 5px;
+      font-size: 15px;
+      color: #8b2337;
+      padding-left: 2px;
+    }
+    .attendance-group {
+      display: grid;
+      gap: 10px;
+    }
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 54px;
+      border-radius: 16px;
+      padding: 12px 14px;
+      border: 1.5px solid rgba(198,166,101,.48);
+      background: rgba(250,245,235,.84);
+      cursor: pointer;
+      transition: transform .22s ease, box-shadow .22s ease, background .22s ease, border-color .22s ease;
+    }
+    .radio-option:hover { transform: translateY(-1px); box-shadow: var(--soft-shadow); }
+    .radio-option input { position: absolute; opacity: 0; pointer-events: none; }
+    .radio-mark {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid rgba(198,166,101,.92);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: #fff9f0;
+    }
+    .radio-mark::after {
+      content: '';
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--gold-soft);
+      transform: scale(0);
+      transition: transform .2s ease;
+    }
+    .radio-option.active {
+      background: rgba(247,239,223,.96);
+      border-color: var(--gold-soft);
+      box-shadow: var(--soft-shadow);
+    }
+    .radio-option.active .radio-mark::after { transform: scale(1); }
+    .radio-label {
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 1.05;
+    }
+    .collapsible {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: max-height .38s ease, opacity .28s ease, transform .28s ease;
+    }
+    .collapsible.open {
+      max-height: 140px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .event-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .event-pill {
+      position: relative;
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1.6px solid rgba(198,166,101,.86);
+      background: rgba(250,245,235,.92);
+      cursor: pointer;
+      transition: transform .22s ease, box-shadow .22s ease, background .22s ease, border-color .22s ease;
+    }
+    .event-pill:hover { transform: translateY(-1px); box-shadow: var(--soft-shadow); }
+    .event-pill input { position: absolute; opacity: 0; }
+    .event-pill.selected {
+      background: rgba(247,239,223,.98);
+      border-color: rgba(92,22,39,.38);
+      box-shadow: var(--soft-shadow);
+    }
+    .event-pill-name {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--maroon);
+      line-height: 1;
+    }
+    .event-pill-check {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid rgba(198,166,101,.86);
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+      color: white;
+      background: transparent;
+      transition: .22s ease;
+      flex-shrink: 0;
+    }
+    .event-pill.selected .event-pill-check { background: var(--gold-soft); }
+    .submit-btn {
+      width: 100%;
+      min-height: 58px;
+      border: none;
+      border-radius: 16px;
+      background: rgb(198,166,101);
+      color: #fff;
+      font-size: clamp(26px, 5vw, 30px);
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 22px rgba(198,166,101,.25);
+      transition: transform .2s ease, background .2s ease, opacity .2s ease;
+      margin-top: 2px;
+    }
+    .submit-btn:hover { background: rgb(183,151,85); }
+    .submit-btn:active { transform: scale(.985); }
+    .submit-btn:disabled { opacity: .72; cursor: progress; }
+    .spinner {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,.35);
+      border-top-color: #fff;
+      display: inline-block;
+      margin-left: 10px;
+      vertical-align: middle;
+      animation: spin .75s linear infinite;
+    }
+
+    .success-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 70;
+      background: rgba(92,22,39,.16);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 18px;
+      text-align: center;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .32s ease, visibility .32s ease;
+    }
+    .success-screen.show { opacity: 1; visibility: visible; pointer-events: auto; }
+    .success-card {
+      width: min(92vw, 430px);
+      position: relative;
+      z-index: 2;
+      background: rgba(255,250,243,.98);
+      border-radius: 28px;
+      border: 1px solid rgba(198,166,101,.28);
+      box-shadow: 0 22px 60px rgba(0,0,0,.18);
+      padding: 28px 24px 22px;
+      transform: translateY(10px) scale(.98);
+      transition: transform .34s cubic-bezier(.22,1,.36,1);
+    }
+    .success-screen.show .success-card { transform: translateY(0) scale(1); }
+    .success-check {
+      width: 82px;
+      height: 82px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(100,164,117,.14);
+      border: 1px solid rgba(100,164,117,.28);
+      color: #3e8a53;
+      font-size: 42px;
+      animation: popIn .65s cubic-bezier(.22,1,.36,1) .14s both;
+    }
+    .success-card h3 {
+      margin: 0 0 10px;
+      font-size: clamp(40px, 7vw, 48px);
+    }
+    .success-card p {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.32;
+      color: var(--muted);
+    }
+    .success-close {
+      width: 100%;
+      min-height: 50px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(92,22,39,.96), rgba(169,107,75,.96));
+      color: #fff;
+      font-size: 19px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 22px rgba(92,22,39,.18);
+    }
+    .rsvp-shell.success-mode .rsvp-form {
+      filter: blur(5px);
+      opacity: .42;
+      transform: scale(.992);
+      transition: filter .28s ease, opacity .28s ease, transform .28s ease;
+      pointer-events: none;
+    }
+    .confetti {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .confetti-piece {
+      position: absolute;
+      top: -12px;
+      width: 7px;
+      height: 13px;
+      border-radius: 99px;
+      background: linear-gradient(180deg, rgba(212,175,55,.88), rgba(245,220,160,.95));
+      animation: confettiFall linear forwards;
+    }
+
+
+    .scroll-cue {
+      position: absolute;
+      left: 50%;
+      bottom: calc(18px + env(safe-area-inset-bottom));
+      transform: translateX(-50%);
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(245,220,160,.75);
+      border-radius: 999px;
+      background: rgba(92,22,39,.18);
+      color: var(--ivory);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,.14);
+      cursor: pointer;
+      z-index: 3;
+      animation: cueFloat 1.8s ease-in-out infinite;
+      transition: opacity .28s ease, transform .28s ease, background .22s ease;
+    }
+    .scroll-cue:hover, .scroll-cue:focus-visible { background: rgba(92,22,39,.3); }
+    .scroll-cue.hidden { opacity: 0; pointer-events: none; transform: translate(-50%, 10px); }
+    .scroll-cue svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+    footer {
+      padding: 22px 20px calc(34px + env(safe-area-inset-bottom));
+      text-align: center;
+      background: rgba(92,22,39,.94);
+      color: #f6ead2;
+    }
+    .footer-love {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 8vw, 38px);
+      letter-spacing: .02em;
+    }
+    .footer-meta {
+      font-size: clamp(18px, 4.5vw, 22px);
+      opacity: .92;
+    }
+    .footer-meta {
+      line-height: 1.4;
+    }
+    .event-dresscode {
+      margin-top: 8px;
+      font-size: 16px;
+      line-height: 1.15;
+      color: var(--ivory-3);
+    }
+    .event-dresscode span {
+      font-weight: 700;
+      color: var(--champagne);
+    }
+    .couple-section {
+      padding-top: 18px;
+      padding-bottom: 24px;
+      margin-top: -28px;
+    }
+    .couple-section .section-subtitle {
+      max-width: 90%;
+    }
+    .couple-frame {
+      width: min(92%, 520px);
+      margin: 22px auto 0;
+      padding: 14px;
+      border-radius: 30px;
+      background: rgba(247,239,223,.78);
+      box-shadow: 0 18px 45px rgba(0,0,0,.10);
+      border: 2px solid rgba(92,22,39,.18);
+      backdrop-filter: blur(4px);
+      overflow: hidden;
+    }
+    .couple-frame img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      height: auto;
+      border-radius: 22px;
+      object-fit: cover;
+      object-position: center top;
+      box-shadow: 0 10px 26px rgba(67, 32, 18, .18);
+    }
+
+    @keyframes heroDrop {
+      0% { opacity: 0; transform: translateY(18px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes sectionRise {
+      0% { opacity: 0; transform: translateY(18px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes cardBounce {
+      0% { transform: rotateY(180deg) translateY(-4px) scale(1); }
+      50% { transform: rotateY(180deg) translateY(-6px) scale(1.014); }
+      100% { transform: rotateY(180deg) translateY(-4px) scale(1); }
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes popIn {
+      0% { opacity: 0; transform: scale(.72); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    @keyframes confettiFall {
+      0% { transform: translate3d(0, 0, 0) rotate(0deg); opacity: 0; }
+      10% { opacity: .9; }
+      100% { transform: translate3d(var(--drift), 110vh, 0) rotate(var(--rotate)); opacity: 0; }
+    }
+    @keyframes cueFloat {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+
+    @media (min-width: 560px) {
+      .attendance-group { grid-template-columns: 1fr 1fr; }
+      .rsvp-grid { grid-template-columns: 1fr 1fr; }
+      .event-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .rsvp-shell { padding: 34px 24px 28px; }
+    }
+    @media (max-width: 430px) {
+      .hero-copy { top: 26%; width: 88%; }
+      .ganesha { margin-bottom: 16px; }
+      .luxury-italics { font-size: 17px; }
+      .invite-main { margin-top: 16px; font-size: 14px; letter-spacing: .18em; }
+      .invite-sub { font-size: 17px; }
+      .name-script { font-size: clamp(40px, 9.4vw, 62px); margin-top: 20px; }
+      .parent-group { font-size: 13px; }
+      .with-row { margin: 16px auto 18px; font-size: 12px; }
+      .divider { width: 24%; }
+      .themed-section { padding: 64px 0 82px; }
+      .festivities-wrap { gap: 24px; }
+      .flip-card { width: min(82vw, 340px); height: 392px; }
+      .event-title { font-size: 27px; }
+      .event-time, .event-muhurtham, .venue-link { font-size: 16px; }
+      .section-subtitle { max-width: 92%; }
+      .rsvp-shell { padding: 26px 14px 22px; }
+      .label { font-size: 19px; }
+      .text-input, .number-input, .textarea-input { font-size: 18px; min-height: 50px; }
+      .radio-label, .event-pill-name { font-size: 18px; }
+      .event-list { grid-template-columns: 1fr 1fr; }
+      .success-card p { font-size: 20px; }
+    }
+  </style>
+</head>
+<body class="locked">
+  <div class="opening-screen" id="openingScreen" aria-label="Opening screen">
+    <div class="opening-half left" id="openingLeft"></div>
+    <div class="opening-half right" id="openingRight"></div>
+  </div>
+
+  <main class="site" id="site">
+    <section class="hero-page">
+      <div class="hero-overlay">
+        <div class="hero-copy" id="heroCopy">
+          <div class="reveal-text luxury-italics g1">By Grace Of God &amp;</div>
+          <div class="reveal-text amp g2" style="display:none"></div>
+          <div class="reveal-text luxury-italics g3">Blessings of Our Elders,</div>
+          <div class="reveal-text invite-main g4">WE JOYFULLY INVITE YOU</div>
+          <div class="reveal-text invite-sub g5">to Celebrate the Wedding of</div>
+          <div class="reveal-text name-script g6">Tirumani Harshitha</div>
+          <div class="reveal-text parent-group g6">
+            <div>D/O Tirumani Bhaskara Narayana Varma</div>
+            <div>&amp; Tirumani Naga Jyothi</div>
+          </div>
+          <div class="reveal-text with-row g7">
+            <span class="divider"></span>
+            <span>WITH</span>
+            <span class="divider"></span>
+          </div>
+          <div class="reveal-text name-script g8">Jasti Sai Vignesh</div>
+          <div class="reveal-text parent-group g8">
+            <div>S/O Jasti Prabhakar Rao</div>
+            <div>&amp; Jasti Ratna Kumari</div>
+          </div>
+        </div>
+      </div>
+      <button class="scroll-cue" id="scrollCue" type="button" aria-label="Scroll down">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+    </section>
+
+    <section class="themed-section" id="festivitiesSection">
+      <div class="section-inner reveal-block">
+        <div class="ornament">
+          <svg viewBox="0 0 140 28" aria-hidden="true">
+            <path d="M6 14h30c7 0 8-8 14-8 5 0 8 5 20 5s15-5 20-5c6 0 7 8 14 8h10"/>
+            <path d="M6 14h30c7 0 8 8 14 8 5 0 8-5 20-5s15 5 20 5c6 0 7-8 14-8h10"/>
+            <circle cx="70" cy="14" r="3.2" fill="currentColor" stroke="none" style="color:#c29c5c"></circle>
+          </svg>
+        </div>
+        <h2 class="section-title">The Festivities</h2>
+        <p class="section-subtitle">Every celebration is a cherished memory in the making.</p>
+        <div class="festivities-wrap" id="festivitiesWrap"></div>
+      </div>
+    </section>
+
+    <section class="themed-section" id="rsvpSection">
+      <div class="section-inner reveal-block">
+        <div class="ornament">
+          <svg viewBox="0 0 140 28" aria-hidden="true">
+            <path d="M6 14h30c7 0 8-8 14-8 5 0 8 5 20 5s15-5 20-5c6 0 7 8 14 8h10"/>
+            <path d="M6 14h30c7 0 8 8 14 8 5 0 8-5 20-5s15 5 20 5c6 0 7-8 14-8h10"/>
+            <circle cx="70" cy="14" r="3.2" fill="currentColor" stroke="none" style="color:#c29c5c"></circle>
+          </svg>
+        </div>
+        <h2 class="section-title">RSVP</h2>
+        <p class="section-subtitle">We would be delighted to celebrate this beautiful occasion with you. Kindly let us know your presence.</p>
+
+        <div class="rsvp-shell" id="rsvpShell">
+          <div class="success-screen" id="successScreen" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+            <div class="confetti" id="confetti"></div>
+            <div class="success-card">
+              <div class="success-check">✓</div>
+              <h3 id="successTitle">Thank You!</h3>
+              <p>Your RSVP has been received with love. We look forward to celebrating with you.</p>
+              <button class="success-close" id="successClose" type="button">Close</button>
+            </div>
+          </div>
+
+          <form class="rsvp-form" id="rsvpForm" novalidate>
+            <div class="form-error-banner" id="formBanner" role="alert" aria-live="polite"></div>
+            <div class="rsvp-grid">
+              <div class="field full">
+                <label class="label">Will you be joining us for our wedding celebrations?</label>
+                <div class="attendance-group" id="attendanceGroup" role="radiogroup" aria-label="Wedding attendance">
+                  <label class="radio-option">
+                    <input type="radio" name="attendance" value="Yes, We'd Love To Attend">
+                    <span class="radio-mark"></span>
+                    <span class="radio-label">Yes, We'd Love To Attend</span>
+                  </label>
+                  <label class="radio-option">
+                    <input type="radio" name="attendance" value="We Are Unable To Attend">
+                    <span class="radio-mark"></span>
+                    <span class="radio-label">👉🏻 Love to, but we regret that we cannot attend.</span>
+                  </label>
+                </div>
+                <div class="error-msg" data-error-for="attendance"></div>
+              </div>
+
+              <div class="field">
+                <label class="label" for="guestName">Primary Guest Name *</label>
+                <input class="text-input" id="guestName" name="guestName" type="text" placeholder="Enter your full name">
+                <div class="error-msg" data-error-for="guestName"></div>
+              </div>
+
+              <div class="field">
+                <label class="label" for="email">Email Address *</label>
+                <input class="text-input" id="email" name="email" type="email" placeholder="Enter your email address">
+                <div class="error-msg" data-error-for="email"></div>
+              </div>
+
+              <div class="field">
+                <label class="label" for="phone">Phone Number</label>
+                <input class="text-input" id="phone" name="phone" type="tel" placeholder="Optional">
+                <div class="error-msg" data-error-for="phone"></div>
+              </div>
+
+              <div class="field" id="guestsWrap">
+                <label class="label" for="guests">Total Guests Attending *</label>
+                <div class="number-stepper">
+                  <button class="stepper-btn" id="guestsMinus" type="button" aria-label="Decrease guest count">−</button>
+                  <input class="number-input" id="guests" name="guests" type="number" min="1" max="20" value="1" inputmode="numeric">
+                  <button class="stepper-btn" id="guestsPlus" type="button" aria-label="Increase guest count">+</button>
+                </div>
+                <div class="error-msg" data-error-for="guests"></div>
+              </div>
+
+              <div class="field full" id="eventsField">
+                <label class="label">Will you attend the wedding?</label>
+                <div class="event-list" id="eventList"></div>
+                <div class="error-msg" data-error-for="events"></div>
+              </div>
+
+              <div class="field full">
+                <label class="label" for="message">Blessings or Message for the Couple (Optional)</label>
+                <textarea class="textarea-input" id="message" name="message" placeholder="Share your blessings, wishes or a heartfelt message..."></textarea>
+                <div class="error-msg" data-error-for="message"></div>
+              </div>
+
+              <div class="field full">
+                <button class="submit-btn" id="submitBtn" type="submit">Submit RSVP</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="themed-section couple-section" id="coupleSection">
+      <div class="section-inner reveal-block">
+        <div class="ornament">
+          <svg viewBox="0 0 140 28" aria-hidden="true">
+            <path d="M6 14h30c7 0 8-8 14-8 5 0 8 5 20 5s15-5 20-5c6 0 7 8 14 8h10"/>
+            <path d="M6 14h30c7 0 8 8 14 8 5 0 8-5 20-5s15 5 20 5c6 0 7-8 14-8h10"/>
+            <circle cx="70" cy="14" r="3.2" fill="currentColor" stroke="none" style="color:#c29c5c"></circle>
+          </svg>
+        </div>
+        <h2 class="section-title">Meet Bride &amp; Groom</h2>
+        <p class="section-subtitle">At the heart of this celebration are two beautiful souls beginning their forever together.</p>
+        <div class="couple-frame">
+          <img src="https://raw.githubusercontent.com/maryam-FOLDS/Harshitha-Vignesh/refs/heads/main/cimg.jpg" alt="Harshitha and Vignesh">
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-meta">Made by @themaryam.in | +91 7359033087</div>
+    </footer>
+  </main>
+
+  <script>
+  (() => {
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxxCgar67vUZ9redEcDppZdbKFOzdoAjoZXPYz6dotOwWR_LDb7omhufqoqovhsX-RT/exec";
+
+    const festivities = [
+      { key: 'wedding', title: 'Wedding', date: 'September 5, 2026', time: '7:00 AM Onwards', muhurtham: 'Muhurtham: 9:07 AM', venue: 'Frisco Hall Event Center', maps: 'https://maps.app.goo.gl/4wo4TjXJmb2UmDuo7?g_st=iw', image: 'https://raw.githubusercontent.com/maryam-FOLDS/Harshitha-Vignesh/refs/heads/main/ki3.png', dressCode: 'Ethnic Wear' }
+    ];
+
+    const preloadUrls = [
+      'https://raw.githubusercontent.com/maryam-FOLDS/Harshitha-Vignesh/refs/heads/main/ki0.png',
+      'https://raw.githubusercontent.com/maryam-FOLDS/Harshitha-Vignesh/refs/heads/main/bgh.png',
+      'https://raw.githubusercontent.com/maryam-FOLDS/Harshitha-Vignesh/refs/heads/main/ki2.png',
+      'https://raw.githubusercontent.com/maryam-FOLDS/Harshitha-Vignesh/refs/heads/main/cimg.jpg',
+      ...festivities.map(item => item.image)
+    ];
+    preloadUrls.forEach((url) => { const img = new Image(); img.src = url; });
+
+    const $ = (sel, root = document) => root.querySelector(sel);
+    const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+    const openingScreen = $('#openingScreen');
+    const openingLeft = $('#openingLeft');
+    const openingRight = $('#openingRight');
+    const heroCopy = $('#heroCopy');
+    const scrollCue = $('#scrollCue');
+    const festivitiesWrap = $('#festivitiesWrap');
+    const festivitiesSection = $('#festivitiesSection');
+    const eventList = $('#eventList');
+    const rsvpShell = $('#rsvpShell');
+    const form = $('#rsvpForm');
+    const submitBtn = $('#submitBtn');
+    const attendanceGroup = $('#attendanceGroup');
+    const formBanner = $('#formBanner');
+    const successScreen = $('#successScreen');
+    const successClose = $('#successClose');
+    const confetti = $('#confetti');
+    const guestsInput = $('#guests');
+    const guestsMinus = $('#guestsMinus');
+    const guestsPlus = $('#guestsPlus');
+    const errorMap = Object.fromEntries($$('[data-error-for]').map((el) => [el.dataset.errorFor, el]));
+
+    let opened = false;
+    let dragging = false;
+    let startY = 0;
+    let progress = 0;
+    let submitting = false;
+    let cardsTriggered = false;
+    let cardsAnimating = false;
+
+    const bgMusic = new Audio('https://github.com/maryam-FOLDS/Harshitha-Vignesh/raw/refs/heads/main/Kalyanam.mp3');
+    bgMusic.loop = false;
+    bgMusic.preload = 'auto';
+    bgMusic.volume = 0.9;
+    bgMusic.addEventListener('timeupdate', () => {
+      if (bgMusic.currentTime >= 15) {
+        bgMusic.currentTime = 0;
+        const replay = bgMusic.play();
+        if (replay && typeof replay.catch === 'function') replay.catch(() => {});
+      }
+    });
+    bgMusic.addEventListener('ended', () => {
+      bgMusic.currentTime = 0;
+      const replay = bgMusic.play();
+      if (replay && typeof replay.catch === 'function') replay.catch(() => {});
+    });
+
+    async function startMusic() {
+      try {
+        await bgMusic.play();
+      } catch (_error) {
+        // Ignore autoplay interruption; gesture-based retry will happen on next interaction.
+      }
+    }
+
+    function stopMusic() {
+      bgMusic.pause();
+      bgMusic.currentTime = 0;
+    }
+
+    window.addEventListener('pagehide', stopMusic);
+    window.addEventListener('beforeunload', stopMusic);
+    window.addEventListener('popstate', stopMusic);
+    document.addEventListener('visibilitychange', () => {
+      if (!opened) return;
+      if (document.visibilityState === 'visible') startMusic();
+      else bgMusic.pause();
+    });
+    ['pointerdown', 'touchend', 'click', 'keydown'].forEach((evt) => {
+      document.addEventListener(evt, () => {
+        if (opened) startMusic();
+      }, { passive: true });
+    });
+
+    festivities.forEach((item) => {
+      const card = document.createElement('article');
+      card.className = 'flip-card ready';
+      card.dataset.flipped = 'false';
+      card.dataset.animating = 'false';
+      card.style.setProperty('--image-position', item.position || 'center center');
+      card.innerHTML = `
+        <div class="flip-card-inner">
+          <div class="card-face card-back" style="background-image:url('${item.image}')"></div>
+          <div class="card-face card-front">
+            <div class="card-top-image" style="background-image:url('${item.image}')"></div>
+            <div class="card-footer">
+              <div>
+                <h3 class="event-title">${item.title}</h3>
+                <p class="event-time">${item.date}${item.time ? '<br>' + item.time : ''}</p>
+                ${item.muhurtham ? `<div class="event-muhurtham">${item.muhurtham}</div>` : ''}
+                ${item.dressCode ? `<div class="event-dresscode"><span>Dress code:</span> ${item.dressCode}</div>` : ''}
+              </div>
+              <a class="venue-link" href="${item.maps}" target="_blank" rel="noopener noreferrer">📍 <span>${item.venue}</span></a>
+            </div>
+          </div>
+        </div>`;
+      festivitiesWrap.appendChild(card);
+
+      const pill = document.createElement('label');
+      pill.className = 'event-pill';
+      pill.innerHTML = `
+        <input type="checkbox" name="events" value="${item.title}" data-key="${item.key}">
+        <span class="event-pill-name">${item.title}</span>
+        <span class="event-pill-check">✓</span>`;
+      const checkbox = $('input', pill);
+      checkbox.addEventListener('change', () => pill.classList.toggle('selected', checkbox.checked));
+      eventList.appendChild(pill);
+    });
+
+    const cards = $$('.flip-card');
+
+    function cancelCardAnimation(card) {
+      return $('.flip-card-inner', card);
+    }
+
+    function resetCard(card) {
+      const inner = cancelCardAnimation(card);
+      if (!card) return;
+      card.classList.remove('flipped', 'flipping');
+      card.dataset.flipped = 'false';
+      card.dataset.animating = 'false';
+      if (inner) {
+        inner.style.transform = '';
+        inner.style.boxShadow = '';
+      }
+    }
+
+    function flipCard(card) {
+      if (!card || card.dataset.flipped === 'true' || card.dataset.animating === 'true') return;
+      card.dataset.animating = 'true';
+      requestAnimationFrame(() => {
+        card.classList.add('flipped');
+        card.classList.remove('flipping');
+        card.dataset.flipped = 'true';
+        card.dataset.animating = 'false';
+      });
+    }
+
+    function maybeTriggerVisibleCards() {
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      cards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        const visibleHeight = Math.min(rect.bottom, vh) - Math.max(rect.top, 0);
+        const visibilityRatio = Math.max(0, visibleHeight) / Math.max(rect.height, 1);
+        const inActivationBand = rect.top < vh * 0.78 && rect.bottom > vh * 0.26;
+        const fullyAway = rect.bottom < vh * 0.04 || rect.top > vh * 0.96;
+        if ((visibilityRatio > 0.42 || inActivationBand) && card.dataset.flipped !== 'true') {
+          flipCard(card);
+        } else if (fullyAway && card.dataset.animating !== 'true') {
+          resetCard(card);
+        }
+      });
+    }
+
+    function setOpeningProgress(value) {
+      progress = Math.max(0, Math.min(1, value));
+      openingLeft.style.transform = `translateX(${-103 * progress}%)`;
+      openingRight.style.transform = `translateX(${103 * progress}%)`;
+    }
+
+    function finishOpen() {
+      if (opened) return;
+      opened = true;
+      dragging = false;
+      openingScreen.classList.remove('dragging');
+      openingScreen.classList.add('open');
+      document.body.classList.remove('locked');
+      setOpeningProgress(1);
+      requestAnimationFrame(() => heroCopy.classList.add('play'));
+      setTimeout(() => openingScreen.classList.add('done'), 140);
+      startMusic();
+      setTimeout(maybeTriggerVisibleCards, 120);
+    }
+
+    function resetOpen() {
+      openingScreen.classList.remove('dragging');
+      setOpeningProgress(0);
+    }
+
+    openingScreen.addEventListener('touchstart', (e) => {
+      if (opened) return;
+      dragging = true;
+      openingScreen.classList.add('dragging');
+      startY = e.changedTouches[0].clientY;
+    }, { passive: true });
+
+    openingScreen.addEventListener('touchmove', (e) => {
+      if (!dragging || opened) return;
+      const delta = Math.max(0, startY - e.changedTouches[0].clientY);
+      setOpeningProgress(delta / 160);
+    }, { passive: true });
+
+    openingScreen.addEventListener('touchend', () => {
+      if (!dragging || opened) return;
+      dragging = false;
+      progress > 0.22 ? finishOpen() : resetOpen();
+    }, { passive: true });
+
+    openingScreen.addEventListener('wheel', (e) => {
+      if (!opened && e.deltaY > 8) finishOpen();
+    }, { passive: true });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.12 });
+    $$('.reveal-block').forEach((el) => revealObserver.observe(el));
+
+    cards.forEach((card) => resetCard(card));
+
+    const singleCardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const card = entry.target;
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        if (entry.isIntersecting && entry.intersectionRatio > 0.36) {
+          flipCard(card);
+        } else {
+          const rect = card.getBoundingClientRect();
+          if ((rect.bottom < vh * 0.04 || rect.top > vh * 0.96) && card.dataset.animating !== 'true') {
+            resetCard(card);
+          }
+        }
+      });
+    }, { threshold: [0, 0.18, 0.36, 0.52] });
+
+    cards.forEach((card) => singleCardObserver.observe(card));
+    ['scroll', 'resize', 'touchmove', 'touchend'].forEach((evt) => window.addEventListener(evt, maybeTriggerVisibleCards, { passive: true }));
+    setTimeout(maybeTriggerVisibleCards, 60);
+
+    const rsvpObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) rsvpShell.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    rsvpObserver.observe(rsvpShell);
+
+    function updateScrollCue() {
+      const hide = window.scrollY > Math.max(140, window.innerHeight * 0.25);
+      scrollCue.classList.toggle('hidden', hide);
+    }
+    scrollCue.addEventListener('click', () => festivitiesSection.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+    window.addEventListener('scroll', updateScrollCue, { passive: true });
+    updateScrollCue();
+
+    function updateStepperState() {
+      const count = Math.min(20, Math.max(1, parseInt(guestsInput.value || '1', 10) || 1));
+      guestsInput.value = String(count);
+      guestsMinus.disabled = count <= 1;
+      guestsPlus.disabled = count >= 20;
+    }
+    function adjustGuests(delta) {
+      guestsInput.value = String((parseInt(guestsInput.value || '1', 10) || 1) + delta);
+      updateStepperState();
+    }
+    guestsMinus.addEventListener('click', () => adjustGuests(-1));
+    guestsPlus.addEventListener('click', () => adjustGuests(1));
+    guestsInput.addEventListener('input', updateStepperState);
+    updateStepperState();
+
+    function currentAttendance() {
+      return form.querySelector('input[name="attendance"]:checked')?.value || '';
+    }
+
+    function updateAttendanceUI() {
+      $$('.radio-option').forEach((label) => {
+        const input = $('input', label);
+        label.classList.toggle('active', !!input.checked);
+      });
+    }
+    attendanceGroup.addEventListener('change', updateAttendanceUI);
+    updateAttendanceUI();
+
+    function trimFields() {
+      ['guestName', 'email', 'phone', 'message'].forEach((id) => {
+        const field = document.getElementById(id);
+        field.value = field.value.trim();
+      });
+    }
+
+    function clearErrors() {
+      Object.values(errorMap).forEach((el) => { el.textContent = ''; });
+      formBanner.classList.remove('show');
+      formBanner.textContent = '';
+      $$('.text-input, .number-input, .textarea-input').forEach((el) => {
+        el.style.borderColor = 'rgba(92,22,39,.16)';
+      });
+    }
+
+    function setError(name, message) {
+      if (errorMap[name]) errorMap[name].textContent = message;
+      const field = document.getElementById(name);
+      if (field) field.style.borderColor = 'rgba(139,35,55,.55)';
+    }
+
+    function validateForm() {
+      trimFields();
+      updateStepperState();
+      clearErrors();
+      let valid = true;
+      const guestName = $('#guestName').value;
+      const email = $('#email').value;
+      const attendance = currentAttendance();
+      const count = parseInt(guestsInput.value || '1', 10);
+      if (!attendance) { setError('attendance', 'Please select your attendance status.'); valid = false; }
+      if (!guestName) { setError('guestName', 'Please enter the primary guest name.'); valid = false; }
+      if (!email) { setError('email', 'Please enter your email address.'); valid = false; }
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setError('email', 'Please enter a valid email address.'); valid = false; }
+      if (!Number.isInteger(count) || count < 1) { setError('guests', 'Guest count must be at least 1.'); valid = false; }
+      if (!valid) {
+        formBanner.textContent = 'Please review the required fields highlighted below.';
+        formBanner.classList.add('show');
+      }
+      return valid;
+    }
+
+    function buildPayload() {
+      const checked = Object.fromEntries(
+        festivities.map((item) => [item.key, !!form.querySelector(`input[data-key="${item.key}"]`)?.checked])
+      );
+      return {
+        attending: currentAttendance(),
+        primaryGuestName: $('#guestName').value.trim(),
+        emailAddress: $('#email').value.trim(),
+        phoneNumber: $('#phone').value.trim(),
+        totalGuests: parseInt(guestsInput.value || '1', 10) || 1,
+        wedding: checked.wedding,
+        blessings: $('#message').value.trim()
+      };
+    }
+
+    function burstConfetti() {
+      confetti.innerHTML = '';
+      for (let i = 0; i < 42; i += 1) {
+        const piece = document.createElement('span');
+        piece.className = 'confetti-piece';
+        piece.style.left = `${Math.random() * 100}%`;
+        piece.style.animationDuration = `${2 + Math.random() * 1.1}s`;
+        piece.style.animationDelay = `${Math.random() * .22}s`;
+        piece.style.setProperty('--drift', `${(Math.random() - 0.5) * 160}px`);
+        piece.style.setProperty('--rotate', `${180 + Math.random() * 540}deg`);
+        piece.style.height = `${10 + Math.random() * 10}px`;
+        piece.style.width = `${5 + Math.random() * 4}px`;
+        confetti.appendChild(piece);
+      }
+      setTimeout(() => { confetti.innerHTML = ''; }, 3100);
+    }
+
+    function setSubmitState(isBusy) {
+      submitBtn.disabled = isBusy;
+      submitBtn.innerHTML = isBusy ? 'Submitting RSVP... <span class="spinner" aria-hidden="true"></span>' : 'Submit RSVP';
+    }
+
+    function resetFormUi() {
+      form.reset();
+      $$('.event-pill').forEach((pill) => pill.classList.remove('selected'));
+      updateAttendanceUI();
+      guestsInput.value = '1';
+      updateStepperState();
+      clearErrors();
+    }
+
+    function showSuccess() {
+      rsvpShell.classList.add('success-mode');
+      successScreen.classList.add('show');
+      burstConfetti();
+      successClose.focus();
+    }
+
+    function closeSuccess() {
+      successScreen.classList.remove('show');
+      rsvpShell.classList.remove('success-mode');
+      resetFormUi();
+      setSubmitState(false);
+    }
+    successClose.addEventListener('click', closeSuccess);
+    successScreen.addEventListener('click', (e) => { if (e.target === successScreen) closeSuccess(); });
+
+    async function submitPayload(payload) {
+      const jsonBody = JSON.stringify(payload);
+
+      try {
+        const response = await fetch(SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: jsonBody,
+          redirect: 'follow'
+        });
+        let data = null;
+        try { data = await response.json(); } catch (_error) {}
+        if (response.ok && (!data || data.status === 200 || data.status === 'success' || data.status === 'ok')) return data || { status: 'success', message: 'RSVP submitted.' };
+      } catch (_error) {
+        // Fall through to Apps Script-safe fallback below.
+      }
+
+      try {
+        await fetch(SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: jsonBody,
+          mode: 'no-cors',
+          keepalive: true
+        });
+        return { status: 200, message: 'RSVP submitted.' };
+      } catch (_error) {
+        throw new Error('We could not submit your RSVP right now. Please try again.');
+      }
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (submitting) return;
+      if (!validateForm()) return;
+      submitting = true;
+      clearErrors();
+      setSubmitState(true);
+      try {
+        await submitPayload(buildPayload());
+        showSuccess();
+      } catch (error) {
+        formBanner.textContent = error.message || 'A network error occurred. Please try again.';
+        formBanner.classList.add('show');
+        setSubmitState(false);
+      } finally {
+        submitting = false;
+      }
+    });
+
+    $$('.text-input, .number-input, .textarea-input').forEach((input) => {
+      input.addEventListener('input', () => {
+        if (errorMap[input.id]) errorMap[input.id].textContent = '';
+        input.style.borderColor = 'rgba(92,22,39,.16)';
+        if (formBanner.classList.contains('show')) {
+          formBanner.classList.remove('show');
+          formBanner.textContent = '';
+        }
+      });
+    });
+  })();
+  </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
